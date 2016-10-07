@@ -1,0 +1,24 @@
+{
+  "name": "mocart",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "User <user@localhost>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/libs",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "latest",
+    "normalize-css": "^4.2.0",
+    "bootstrap": "4.0.0-alpha.4",
+    "svg4everybody": "^2.1.1"
+  }
+}

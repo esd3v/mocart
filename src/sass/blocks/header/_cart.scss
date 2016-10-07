@@ -1,0 +1,43 @@
+.cart {
+	@include SetButton();
+	width: 100%;
+	padding: 20px 30px;
+	font-size: 15px;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__count {
+		padding: 0 10px;
+	}
+	&__icon {
+		width: 16px;
+		height: 16px;
+		&--arrow {
+			transform: rotate(-90deg);
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.cart {
+		width: 25%;
+		padding: 12px 8px;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.cart {
+		width: auto;
+		font-size: 13px;
+		text-align: right;
+		align-items: flex-end;
+		&__icon {
+			&--arrow {
+				width: 12px;
+				height: 12px;
+			}
+		}
+	}
+}

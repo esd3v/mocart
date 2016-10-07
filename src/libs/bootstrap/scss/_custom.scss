@@ -1,0 +1,48 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+$enable-flex: true;
+
+$spacers: (
+	0: (
+		x: 0,
+		y: 0
+	),
+	1: (
+		x: $spacer-x,
+		y: $spacer-y
+	),
+	2: (
+		x: ($spacer-x * 1.5),
+		y: ($spacer-y * 1.5)
+	),
+	3: (
+		x: ($spacer-x * 3),
+		y: ($spacer-y * 3)
+	),
+	4: (
+		x: ($spacer-x / 1.25),
+		y: ($spacer-y / 1.25)
+	),
+	5: (
+		x: ($spacer-x / 1.50),
+		y: ($spacer-y / 1.50)
+	),
+	6: (
+		x: ($spacer-x / 1.75),
+		y: ($spacer-y / 1.75)
+	),
+	7: (
+		x: ($spacer-x / 2.0),
+		y: ($spacer-y / 2.0)
+	),
+);
+
+$container-max-widths: (
+  sm: 576px,
+  md: 720px,
+  lg: 940px,
+  xl: 1200px
+);

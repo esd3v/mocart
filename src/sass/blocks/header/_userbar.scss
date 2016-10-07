@@ -1,0 +1,13 @@
+.userbar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@include media-breakpoint-up(md) {
+	.userbar {
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: Spacer(1,y);
+	}
+}

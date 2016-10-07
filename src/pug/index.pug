@@ -1,0 +1,76 @@
+include _mixins.pug
+
+doctype html
+html(lang="")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+		title Document
+		meta(name="description", content="")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		link(rel="apple-touch-icon", href="apple-touch-icon.png")
+		link(href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet")
+		link(href="css/main.css" rel="stylesheet")
+	body
+		header.header
+			div.container
+				div.row
+					div.col-md-12
+						address.support
+							button.support__collapse Support
+							ul.support__menu
+								li.support__item Contact &amp; support: #[a.support__link.support__link--number(href="tel:+18001234 5678") +1800 1234 5678]
+								li.support__item #[a.support__link(href="#") Contact us]
+								li.support__item #[a.support__link(href="#") Help]
+			div.header__middle
+				div.container
+					div.row.flex-items-xs-bottom.p-b-2.p-t-1
+						div.col-md-3.col-lg-2
+							+Icon("logo","logo","")
+						div.col-md-9.col-lg-10.col-xl-6
+							form.searchbar(action="search.php" method="GET")
+								select.searchbar__categories(name="category")
+									option.searchbar__category(value="all" selected) All categories
+									option.searchbar__category(value="fashion") Fashion
+									option.searchbar__category(value="booksmedia") Books &amp; media
+									option.searchbar__category(value="clearance") Clearance
+									option.searchbar__category(value="mobile") Mobile phones
+								div.searchbar__search
+									input.searchbar__input(type="search" name="search" placeholder="Search entire store here...")
+									button.searchbar__button(type="submit")
+										+Icon("search","searchbar__icon","")
+						div.col-xl-4
+							div.userbar
+								ul.account
+									li.account__item
+										a.account__link.account__link--myAccount(href="#")
+											+Icon("user","account__icon","myAccount")
+											span.account__label My account
+									li.account__item
+										a.account__link.account__link--trackOrder(href="#")
+											+Icon("map-marker","account__icon","trackOrder")
+											span.account__label Track order
+									li.account__item
+										a.account__link.account__link--login(href="#")
+											+Icon("padlock","account__icon","login")
+											span.account__label Login
+								button.cart
+									span.cart__container
+										+Icon("shopping-cart","cart__icon","cart")
+										span.cart__count 0
+										+Icon("arrow-angle","cart__icon","arrow")
+			div.header__bottom
+				div.container
+					div.row
+						div.col-lg-12
+							nav.filter
+								button.shopEverything
+									span.shopEverything__container
+										span.shopEverything__label Shop everything
+										+Icon("arrow-chevron","shopEverything__icon","arrow")
+								div.tabs
+									a.tabs__tab(href="#") Fashion store
+									a.tabs__tab(href="#") Books &amp; media
+									a.tabs__tab(href="#") Clearance sale
+									a.tabs__tab(href="#") Mobile phones
+		script(src="js/main.js")

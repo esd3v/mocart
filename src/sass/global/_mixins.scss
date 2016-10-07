@@ -1,0 +1,86 @@
+// Fluid typography function by ROBsoer
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+@mixin fluidFontSize($f-min, $f-max, $w-min, $w-max, $fallback: false) {
+	font-size: $f-min;
+	
+	@media (min-width: $w-min) {
+ 		@if ($fallback) {
+			font-size: $fallback;
+ 		}
+		font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px);  
+	}
+	@media (min-width: $w-max) {
+		font-size: $f-max;
+	}
+}
+
+@function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px) {
+	$f-min: strip-unit($f-min);
+	$f-max: strip-unit($f-max);
+	$w-min: strip-unit($w-min);
+	$w-max: strip-unit($w-max);
+
+	$k: ($f-max - $f-min)/($w-max - $w-min);
+	$b: $f-min - $k * $w-min;
+
+	$b: $b + $units;
+
+	@return calc( #{$k} * 100vw + #{$b} );
+}
+
+// Boostrap-based functions
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+@function Spacer($size, $side) {
+	@return map-get(map-get($spacers, $size), $side);
+}
+
+// Misc
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+@mixin SetButton() {
+	color: #fff;
+	font-weight: 700;	
+	border-radius: 6px;
+	background-color: #fb816a;
+}
+@mixin Accordion_SetBorder() {
+	$border: 1px dotted rgba(0,0,0,1.0);
+	&:first-of-type {
+		border-top: $border;
+	}
+	border-bottom: $border;
+}
+
+@function strip-unit($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
+	  @return $number / ($number * 0 + 1);
+	}
+	@return $number;
+}
+
+// Media Queries
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+@mixin ScreenUp($number) {
+	@if (unitless($number)) {
+		$number: $number+px;
+	}
+	@media (min-width: $number) {
+		@content;
+	}
+}
+
+@mixin ScreenDown($number) {
+	@if (unitless($number)) {
+		$number: $number+px;
+	}
+	@media (max-width: $number) {
+		@content;
+	}
+}

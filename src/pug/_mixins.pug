@@ -1,0 +1,8 @@
+mixin Icon(id,name,modLocal)
+	- modGlobal = "icon--" + id + " "
+	if modLocal
+		- modLocal = " " + name + "--" + modLocal
+	else
+		- modLocal = ""
+	svg(class="icon " + modGlobal + name + modLocal)
+		use(xlink:href="img/sprite.svg#" + id)

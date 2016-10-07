@@ -1,0 +1,48 @@
+.account {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	list-style: none;
+	&__label {
+		order: 1;
+	}
+	&__icon {
+		order: 2;
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 22px 0;
+		font-size: 13px;
+		font-weight: 700;
+		color: #fff;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.account {
+		flex-direction: row;
+		justify-content: flex-start;
+		&__label {
+			order: 2;
+			margin-top: 10px;
+			margin-left: 0;
+		}
+		&__item {
+			display: flex;
+			align-items: center;
+			&:not(:first-of-type) {
+				&::before {
+					content: "|";
+					margin: 0 10px;
+					color: #a8a8a8;
+				}
+			}
+		}
+		&__link {
+			padding: 0;
+			flex-direction: column;
+		}
+	}
+}

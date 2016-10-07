@@ -1,0 +1,23 @@
+@import "../libs/normalize-css/normalize";
+
+@import "../libs/bootstrap/scss/variables";
+@import "../libs/bootstrap/scss/custom";
+@import "../libs/bootstrap/scss/mixins";
+@import "../libs/bootstrap/scss/grid";
+@import "../libs/bootstrap/scss/utilities/flex";
+@import "../libs/bootstrap/scss/utilities/spacing";
+
+@import "global/variables";
+@import "global/mixins";
+@import "global/core";
+
+@import "blocks/header/header";
+@import "blocks/header/support";
+@import "blocks/header/logo";
+@import "blocks/header/searchbar";
+@import "blocks/header/userbar";
+@import "blocks/header/cart";
+@import "blocks/header/account";
+@import "blocks/header/filter";
+@import "blocks/header/tabs";
+@import "blocks/header/shopEverything";
