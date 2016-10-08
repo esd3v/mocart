@@ -10,6 +10,7 @@ html(lang="")
 		meta(name="viewport", content="width=device-width, initial-scale=1")
 		link(rel="apple-touch-icon", href="apple-touch-icon.png")
 		link(href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet")
 		link(href="css/main.css" rel="stylesheet")
 	body
 		header.header
@@ -73,4 +74,25 @@ html(lang="")
 									a.tabs__tab(href="#") Books &amp; media
 									a.tabs__tab(href="#") Clearance sale
 									a.tabs__tab(href="#") Mobile phones
+		div.partFeatures
+			div.container
+				div.row.flex-items-md-around.p-t-1.p-b-1
+					div.col-md-4.col-lg-3
+						div.features
+							+Icon("plane","features__icon","plane")
+							div.features__textBlock
+								h4.features__title Free shipping
+								h5.features__description In order min $200
+					div.col-md-4.col-lg-3
+						div.features
+							+Icon("time","features__icon","time")
+							div.features__textBlock
+								h4.features__title 30-days returns
+								h5.features__description Money back guarantee
+					div.col-md-4.col-lg-3
+						div.features
+							+Icon("life-preserver","features__icon","lifePreserver")
+							div.features__textBlock
+								h4.features__title 24/7 support
+								h5.features__description Lifestyme support					
 		script(src="js/main.js")

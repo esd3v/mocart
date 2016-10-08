@@ -1,0 +1,65 @@
+.features {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0;
+	color: #4b4b4b;
+	font-family: "Lato";
+	text-transform: uppercase;
+	&__title {
+		font-size: 18px;
+		font-weight: 700;
+	}
+	&__description {
+		font-size: 16px;
+		text-transform: capitalize;
+	}
+	&__icon {
+		$size: 48px;
+		width: $size;
+		height: $size;
+		fill: #2ca5fa;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.features {
+		justify-content: center;
+		padding: 0;
+		&__textBlock {
+			padding-top: 6px;
+		}
+		&__title {
+			font-size: 15px;
+		}
+		&__description {
+			font-size: 13px;
+		}
+		&__icon {
+			margin-right: 24px;
+			$size: 32px;
+			width: $size;
+			height: $size;
+		}
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.features {
+		align-items: flex-start;
+		&__icon {
+			&--plane {
+				width: 24px;
+				height: 24px;
+			}
+			&--time {
+				width: 26px;
+				height: 26px;
+			}
+			&--lifePreserver {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+}
