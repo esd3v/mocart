@@ -43,11 +43,20 @@
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 @mixin SetButton() {
+	$buttonColor: #fb816a;
+	$buttonTransitionSpeed: 0.3s;
+	$buttonTransitionType: ease-out;
 	color: #fff;
 	font-weight: 700;	
 	border-radius: 6px;
-	background-color: #fb816a;
+	background-color: $buttonColor;
+	transition: all $buttonTransitionSpeed $buttonTransitionType;
+	&:hover {
+		background-color: lighten($buttonColor,5);
+		transition: all $buttonTransitionSpeed $buttonTransitionType;
+	}
 }
+
 @mixin Accordion_SetBorder() {
 	$border: 1px dotted rgba(0,0,0,1.0);
 	&:first-of-type {
