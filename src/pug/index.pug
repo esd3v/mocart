@@ -27,7 +27,7 @@ html(lang="")
 				div.container
 					div.row.flex-items-xs-bottom.p-b-2.p-t-1
 						div.col-md-3.col-lg-2
-							+Icon("logo","logo","")
+							+Icon("logo","logo")
 						div.col-md-9.col-lg-10.col-xl-6
 							form.searchbar(action="search.php" method="GET")
 								select.searchbar__categories(name="category")
@@ -39,25 +39,25 @@ html(lang="")
 								div.searchbar__search
 									input.searchbar__input(type="search" name="search" placeholder="Search entire store here...")
 									button.searchbar__button(type="submit")
-										+Icon("search","searchbar__icon","")
+										+Icon("search","searchbar__icon")
 						div.col-xl-4
 							div.userbar
 								ul.account
 									li.account__item
 										a.account__link.account__link--myAccount(href="#")
-											+Icon("user","account__icon","myAccount")
+											+Icon("user","account__icon")
 											span.account__label My account
 									li.account__item
 										a.account__link.account__link--trackOrder(href="#")
-											+Icon("map-marker","account__icon","trackOrder")
+											+Icon("map-marker","account__icon")
 											span.account__label Track order
 									li.account__item
 										a.account__link.account__link--login(href="#")
-											+Icon("padlock","account__icon","login")
+											+Icon("padlock","account__icon")
 											span.account__label Login
 								button.cart
 									span.cart__container
-										+Icon("shopping-cart","cart__icon","cart")
+										+Icon("shopping-cart","cart__icon")
 										span.cart__count 0
 										+Icon("arrow-angle","cart__icon","arrow")
 			div.header__bottom
