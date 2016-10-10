@@ -81,8 +81,8 @@ html(lang="")
 						div.features
 							+Icon("plane","features__icon","plane")
 							div.features__textBlock
-								h4.features__title Free shipping
-								h5.features__description In order min $200
+								h5.features__title Free shipping
+								h6.features__description In order min $200
 					div.col-md-4.col-lg-3
 						div.features
 							+Icon("time","features__icon","time")
@@ -94,5 +94,23 @@ html(lang="")
 							+Icon("life-preserver","features__icon","lifePreserver")
 							div.features__textBlock
 								h4.features__title 24/7 support
-								h5.features__description Lifestyme support					
+								h5.features__description Lifestyme support
+		div.container
+			div.row.m-t-2
+				div.col-sm-6.col-lg-8
+					div.slider g
+				div.col-sm-6.col-lg-4
+					div.deals
+						h1.deals__title Today's deals
+						h4.deals__endIn End in
+						ul.countDown
+							li.countDown__digits #[span.countDown__digit.countDown__digit--hours]
+							li.countDown__digits #[span.countDown__digit.countDown__digit--minutes]
+							li.countDown__digits #[span.countDown__digit.countDown__digit--seconds]
+						img.deals__photo(src="img/deals.png")
+						h5.deals__name Samsung 16GB MicroSD Class 6
+						div.deals__prices
+							h6.deals__offPrice #[del Rs 499] [30% OFF]
+							h3.deals__currentPrice Rs 350
+
 		script(src="js/main.js")

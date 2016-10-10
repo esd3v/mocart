@@ -1,0 +1,33 @@
+.deals {
+	padding: 20px;
+	text-align: center;
+	background-color: #fff;
+	&__title {
+		@include fluidFontSize(32px, 40px, 320px, 1200px);
+		font-weight: 700;
+		color: $color_accent_1;
+		text-transform: uppercase;
+	}
+	&__endIn {
+		margin-bottom: 8px;
+		font-size: 12px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+	&__photo {
+		margin-top: 28px;
+	}
+	&__name {
+		margin-top: 26px;
+		font-weight: 700;
+	}
+	&__prices {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+	&__currentPrice {
+		font-size: 32px;
+		color: $color_accent_1;
+	}
+}

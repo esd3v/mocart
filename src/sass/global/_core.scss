@@ -11,7 +11,7 @@ body {
 	overflow-x: hidden;
 	color: #222;
 	line-height: 1.2;
-	background-color: #e0e0e0;
+	background-color: $color_body_bg;
 	font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 h1, h2, h3, h4, h5, h6, ul, li, a, p {
@@ -36,16 +36,22 @@ button, select, input {
 	border-width: 0;
 }
 
-address { 
+address {
 	font-style: inherit;
-}
-
-.partFeatures {
-	background-color: #fff;
 }
 
 .icon {
 	width: 16px;
 	height: 16px;
 	fill: #fff;
+}
+
+@include media-breakpoint-down(sm) {
+	body {
+		background-color:$color_content_bg_1;
+	}
+}
+
+.partFeatures {
+	background-color: $color_content_bg_1;
 }
