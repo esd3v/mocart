@@ -97,9 +97,12 @@ html(lang="")
 								h5.features__description Lifestyme support
 		div.container
 			div.row.m-t-2
-				div.col-sm-6.col-lg-8
-					div.slider g
-				div.col-sm-6.col-lg-4
+				div.col-md-6.col-xl-8
+					div.swiper-container
+						div.swiper-wrapper
+							each slide in slides
+								+Slide(slide)
+				div.col-md-6.col-xl-4
 					div.deals
 						h1.deals__title Today's deals
 						h4.deals__endIn End in

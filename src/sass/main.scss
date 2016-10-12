@@ -1,4 +1,5 @@
 @import "../libs/normalize-css/normalize";
+@import "../libs/Swiper/dist/css/swiper.min";
 
 @import "../libs/bootstrap/scss/variables";
 @import "../libs/bootstrap/scss/custom";
@@ -23,6 +24,6 @@
 @import "blocks/header/shopEverything";
 
 @import "blocks/features";
-@import "blocks/slider";
 @import "blocks/deals";
+@import "blocks/slideContent";
 @import "blocks/countDown";

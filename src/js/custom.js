@@ -60,3 +60,23 @@ if (DEBUG) {
 		},delay);
 	})();
 })();
+
+// Slider
+////////////////////////////////////////////////////////
+// $('.slider').slick({
+	// slidesToShow: 1,
+	// slidesToScroll: 1
+// });
+
+var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'horizontal',
+    loop: true,
+	speed: 400,
+	autoplay: 3000,
+	centeredSlides: true,
+
+    // pagination: '.swiper-pagination',
+    // nextButton: '.swiper-button-next',
+    // prevButton: '.swiper-button-prev',
+    // scrollbar: '.swiper-scrollbar',
+});
