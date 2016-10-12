@@ -19,6 +19,7 @@
     "jquery": "latest",
     "normalize-css": "^4.2.0",
     "bootstrap": "4.0.0-alpha.4",
-    "svg4everybody": "^2.1.1"
+    "svg4everybody": "^2.1.1",
+    "Swiper": "swiper#^3.3.1"
   }
 }

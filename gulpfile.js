@@ -140,6 +140,7 @@ gulp.task('jsLibs', function()
 	return gulp.src([
 				'src/libs/jquery/dist/jquery.min.js',
 				'src/libs/svg4everybody/dist/svg4everybody.min.js',
+				'src/libs/Swiper/dist/js/swiper.jquery.min.js',
 			])
 			.pipe(plumber())
 			.pipe(concat('libs.js'))
@@ -194,7 +195,7 @@ gulp.task("watch", ["watch_before"], function()
 		"src/libs/bootstrap/scss/**/*.scss",
 	],["css"]);
 	gulp.watch("src/pug/**/*.pug",["html"]);
-	gulp.watch("src/img/**/*.*",["img"]);
+	gulp.watch("src/img/**/*",["img"]);
 	gulp.watch("src/js/**/*.*",["js"]);
 	browserSync.init({server: "dist"});
 });
