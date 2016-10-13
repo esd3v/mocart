@@ -6,10 +6,6 @@ mixin Icon(id,name,modLocal)
 		- modLocal = ""
 	svg(class="icon " + modGlobal + name + modLocal)
 		use(xlink:href="img/sprite.svg#" + id)
-
-// Slider
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
 -
 	var slides = [
 		{name: "slide_1",url: "#"},

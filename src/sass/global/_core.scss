@@ -40,18 +40,24 @@ address {
 	font-style: inherit;
 }
 
+figure {
+	margin: 0;
+}
+
 .icon {
 	width: 16px;
 	height: 16px;
 	fill: #fff;
 }
 
+.partFeatures {
+	background-color: $color_content_bg_1;
+}
+
+// Global Media
+///////////////////////////////////////////////////////////
 @include media-breakpoint-down(sm) {
 	body {
 		background-color:$color_content_bg_1;
 	}
-}
-
-.partFeatures {
-	background-color: $color_content_bg_1;
 }
