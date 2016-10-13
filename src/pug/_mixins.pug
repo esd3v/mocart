@@ -7,16 +7,26 @@ mixin Icon(id,name,modLocal)
 	svg(class="icon " + modGlobal + name + modLocal)
 		use(xlink:href="img/sprite.svg#" + id)
 
-- var slides = ["slide_1","slide_2","slide_3","slide_4"];
-mixin Slide(name)
+// Slider
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+-
+	var slides = [
+		{name: "slide_1",url: "#"},
+		{name: "slide_2",url: "#"},
+		{name: "slide_3",url: "#"},
+		{name: "slide_4",url: "#"},
+	];
+mixin Slide(name,url)
 	- var xl = 1200
 	- var lg = 992
 	- var md = 768
 	- var sm = 544
 	div.swiper-slide
-		picture.slideContent
-			source.slideContent__image(srcset="img/" + name + "_" + xl + ".jpg" media="(min-width: " + xl + "px)")
-			source.slideContent__image(srcset="img/" + name + "_" + lg + ".jpg" media="(min-width: " + lg + "px)")
-			source.slideContent__image(srcset="img/" + name + "_" + md + ".jpg" media="(min-width: " + md + "px)")
-			source.slideContent__image(srcset="img/" + name + "_" + sm + ".jpg" media="(min-width: " + sm + "px)")
-			img.slideContent__image(src="img/" + name + "_" + md + ".jpg")
+		a(href=url)
+			picture.slideContent
+				source.slideContent__image(srcset="img/" + name + "_" + xl + ".jpg" media="(min-width: " + xl + "px)")
+				source.slideContent__image(srcset="img/" + name + "_" + lg + ".jpg" media="(min-width: " + lg + "px)")
+				source.slideContent__image(srcset="img/" + name + "_" + md + ".jpg" media="(min-width: " + md + "px)")
+				source.slideContent__image(srcset="img/" + name + "_" + sm + ".jpg" media="(min-width: " + sm + "px)")
+				img.slideContent__image(src="img/" + name + "_" + md + ".jpg")

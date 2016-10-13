@@ -100,8 +100,8 @@ html(lang="")
 				div.col-md-6.col-xl-8
 					div.swiper-container
 						div.swiper-wrapper
-							each slide in slides
-								+Slide(slide)
+							each slide, i in slides
+								+Slide(slides[i].name,slides[i].url)
 				div.col-md-6.col-xl-4
 					div.deals
 						h1.deals__title Today's deals
