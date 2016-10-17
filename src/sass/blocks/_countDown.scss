@@ -1,8 +1,8 @@
 .countDown {
-	font-size: 0;
+	display: flex;
+	justify-content: center;
 	list-style: none;
 	&__digits {
-		display: inline-block;
 		color: #fff;
 		font-size: 28px;
 		&:not(:first-of-type) {

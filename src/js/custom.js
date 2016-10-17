@@ -63,11 +63,6 @@ if (DEBUG) {
 
 // Slider
 ////////////////////////////////////////////////////////
-// $('.slider').slick({
-	// slidesToShow: 1,
-	// slidesToScroll: 1
-// });
-
 var mySwiper = new Swiper ('.swiper-container', {
     direction: 'horizontal',
     loop: true,
