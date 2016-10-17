@@ -97,3 +97,28 @@ if (isTopnavOpacity) {
 		}
 	});
 }
+
+// Sidebar
+////////////////////////////////////////////////////////
+var sidebar = document.querySelector(".sidebar");
+var overlay = document.querySelector(".sidebarOverlay");
+var content = document.querySelector("body");
+
+function ToggleSidebar() {
+	sidebar.classList.toggle("sidebar--open");
+	overlay.classList.toggle("sidebarOverlay--open");
+	if (!content.getAttribute("style")) {
+		content.setAttribute("style","overflow: hidden");
+	}
+	else {
+		content.removeAttribute("style");
+	}
+}
+
+document.querySelector('.topnav__toggleSidebar').addEventListener('click', function() {
+	ToggleSidebar();
+});
+
+document.querySelector('.sidebarOverlay').addEventListener('click', function() {
+	ToggleSidebar();
+});

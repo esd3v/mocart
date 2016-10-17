@@ -16,16 +16,29 @@ html(lang="")
 		header.topnav
 			button.topnav__toggleSidebar
 				+Icon("menu","topnav__icon")
+		nav.sidebar
+			ul.sidebar__menu
+				li.sidebar__menuItem.sidebar__menuItem--header Support
+				li.sidebar__menuItem #[a.sidebar__menuLink(href="tel:+18001234 5678") Contact: #[span.sidebar__number +1800 1234 5678]]
+				each item, i in menuLinks[0]
+					li.sidebar__menuItem
+						+SetMenuLink(0,i,"sidebar__menuLink")
+				li.sidebar__menuItem.sidebar__menuItem--header Go Quickly
+				each item, i in menuLinks[1]
+					li.sidebar__menuItem
+						+SetMenuLink(1,i,"sidebar__menuLink")
+		div.sidebarOverlay
 		header.header
 			div.container
-				div.row
+				div.row.hidden-sm-down
 					div.col-md-12
 						address.support
 							button.support__collapse Support
 							ul.support__menu
-								li.support__item Contact &amp; support: #[a.support__link.support__link--number(href="tel:+18001234 5678") +1800 1234 5678]
-								li.support__item #[a.support__link(href="#") Contact us]
-								li.support__item #[a.support__link(href="#") Help]
+								li.support__item Contact &amp; support: #[a.support__link.support__link--number(href="tel:+1800123 5678") +1800 1234 5678]
+								each item, i in menuLinks[0]
+									li.support__item
+										+SetMenuLink(0,i,"support__link")
 			div.header__middle
 				div.container
 					div.row.flex-items-xs-bottom.p-b-2.p-t-1
