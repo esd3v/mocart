@@ -118,5 +118,13 @@ html(lang="")
 						div.deals__prices
 							h6.deals__offPrice #[del Rs 499] [30% OFF]
 							h3.deals__currentPrice Rs 350
-
+		div.container.m-t-2.hidden-sm-down
+			div.goQuickly
+				div.goQuickly__labelContainer
+					b.goQuickly__label Go quickly to
+					+Icon("arrow-circle","goQuickly__icon")
+				ul.goQuickly__list
+					each item, i in menuLinks[1]
+						li.goQuickly__item
+							+SetMenuLink(1,i,"goQuickly__link")
 		script(src="js/main.js")

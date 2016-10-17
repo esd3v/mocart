@@ -7,6 +7,7 @@
 @import "../libs/bootstrap/scss/grid";
 @import "../libs/bootstrap/scss/utilities/flex";
 @import "../libs/bootstrap/scss/utilities/spacing";
+@import "../libs/bootstrap/scss/utilities/visibility";
 
 @import "global/variables";
 @import "global/mixins";
@@ -28,3 +29,4 @@
 @import "blocks/deals";
 @import "blocks/slideContent";
 @import "blocks/countDown";
+@import "blocks/goQuickly";
