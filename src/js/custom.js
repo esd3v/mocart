@@ -80,3 +80,20 @@ var mySwiper = new Swiper ('.swiper-container', {
     // prevButton: '.swiper-button-prev',
     // scrollbar: '.swiper-scrollbar',
 });
+
+// Top Navigation
+////////////////////////////////////////////////////////
+var isTopnavOpacity = false;
+if (isTopnavOpacity) {
+	var offsetShow = $(document).height()*0.2,
+	$button = $('.topnav');
+	var classToggle = "topnav--opacity";
+
+	$(window).scroll(function() {
+		if ($(this).scrollTop() >= offsetShow) {
+			$button.addClass(classToggle)
+		} else {
+			$button.removeClass(classToggle);
+		}
+	});
+}

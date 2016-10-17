@@ -1,0 +1,28 @@
+.topnav {
+	height: $topnav_height;
+	position: fixed;
+	display: flex;
+	width: 100%;
+	padding: 0 20px;
+	z-index: 9;
+	background-color: $color_content_bg_3;
+	&__toggleSidebar {
+		margin-left: auto;
+		padding: 0 16px;
+		background-color: transparent;
+	}
+	&__icon {
+		width: 32px;
+		height: 32px;
+		fill: $color_accent_1;
+	}
+	&--opacity {
+		opacity: 0.8;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.topnav {
+		display: none;
+	}
+}

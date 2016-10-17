@@ -1,4 +1,5 @@
 .header {
+	padding-top: $topnav_height;
 	color: $color_header_txt;
 	background-color: $color_content_bg_3;
 	text-transform: uppercase;
@@ -19,5 +20,11 @@
 	}
 	&__bottom {
 		background-color: $color_content_bg_2;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.header {
+		padding-top: 0;
 	}
 }
