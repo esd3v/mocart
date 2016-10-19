@@ -4,12 +4,12 @@
 /////////////////////////////////////////////////////////////
 @mixin fluidFontSize($f-min, $f-max, $w-min, $w-max, $fallback: false) {
 	font-size: $f-min;
-	
+
 	@media (min-width: $w-min) {
  		@if ($fallback) {
 			font-size: $fallback;
  		}
-		font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px);  
+		font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px);
 	}
 	@media (min-width: $w-max) {
 		font-size: $f-max;
@@ -30,6 +30,10 @@
 	@return calc( #{$k} * 100vw + #{$b} );
 }
 
+@function PS_GetLetterSpacing($trackingValue) {
+	@return ($trackingValue / 1000)+em;
+}
+
 // Boostrap-based functions
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
@@ -47,7 +51,7 @@
 	$buttonTransitionSpeed: 0.3s;
 	$buttonTransitionType: ease-out;
 	color: #fff;
-	font-weight: 700;	
+	font-weight: 700;
 	border-radius: 6px;
 	background-color: $buttonColor;
 	transition: all $buttonTransitionSpeed $buttonTransitionType;
