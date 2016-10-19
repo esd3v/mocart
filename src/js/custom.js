@@ -12,6 +12,12 @@ function GetRandomColor() {
 	return hex;
 }
 
+if (DEBUG) {
+	$.each($("div,svg,a,h1,h2,h3,h4,h5,h6"), function (index, item) {
+		$(item).attr('style', "background-color: " + GetRandomColor());
+	});
+}
+
 // Accordion
 ////////////////////////////////////////////////////////
 $(".support__collapse").on("click",function() {
@@ -23,12 +29,6 @@ $(".support__collapse").on("click",function() {
 $(document).ready(function () {
 	svg4everybody({});
 });
-
-if (DEBUG) {
-	$.each($("div,svg,a"), function (index, item) {
-		$(item).attr('style', "background-color: " + GetRandomColor());
-	});
-}
 
 // Countdown
 ////////////////////////////////////////////////////////

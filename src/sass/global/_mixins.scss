@@ -30,10 +30,6 @@
 	@return calc( #{$k} * 100vw + #{$b} );
 }
 
-@function PS_GetLetterSpacing($trackingValue) {
-	@return ($trackingValue / 1000)+em;
-}
-
 // Boostrap-based functions
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
@@ -47,7 +43,7 @@
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 @mixin SetButton() {
-	$buttonColor: #fb816a;
+	$buttonColor: $color_accent_2;
 	$buttonTransitionSpeed: 0.3s;
 	$buttonTransitionType: ease-out;
 	color: #fff;
@@ -74,6 +70,10 @@
 	  @return $number / ($number * 0 + 1);
 	}
 	@return $number;
+}
+
+@function PS_GetLetterSpacing($trackingValue) {
+	@return ($trackingValue / 1000)+em;
 }
 
 // Media Queries
