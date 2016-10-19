@@ -98,7 +98,7 @@ gulp.task('img_sprite', ["img_sprite_1"], function()
 						sprite: './sprite.svg',
 						bust: false,
 						render: {
-							scss: true
+							scss: false
 						}
 					}
 				},
@@ -223,12 +223,11 @@ gulp.task('build_after', function()
 {
 	// Remove unwanted files
 	gulp.src([
-			'dist/img/icons',
-			'dist/img/sprite.scss',
 			'dist/css/main.css',
 			'dist/js/main.js',
-			'dist/js/libs.js',
-			'dist/js/custom.js',
+			'dist/img/icons', // Temp
+			'dist/js/libs.js', // Temp
+			'dist/js/custom.js', // Temp
 		], {read: false})
 		.pipe(clean());
 
