@@ -28,6 +28,9 @@ img, svg {
 
 a {
 	text-decoration: none;
+	&:hover {
+		color: $color_accent_2;
+	}
 }
 
 button, select, input {
