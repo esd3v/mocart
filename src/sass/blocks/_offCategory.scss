@@ -103,9 +103,6 @@
 		}
 		&__list {
 			line-height: 100%;
-			&--third {
-				color: #fff;
-			}
 		}
 		&__item {
 			&:not(:last-of-type) {
@@ -114,6 +111,12 @@
 		}
 		&__link {
 			flex-grow: 0;
+			&--third {
+				color: #fff;
+				&:hover {
+					color: #222;
+				}
+			}
 		}
 		&__icon {
 			&--white {
