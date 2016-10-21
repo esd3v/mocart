@@ -111,8 +111,8 @@ html(lang="")
 							div.features__textBlock
 								h4.features__title 24/7 support
 								h5.features__description Lifestyme support
-		div.container
-			div.row.m-t-2
+		div.container.m-t-2
+			div.row
 				div.col-md-6.col-xl-8
 					div.swiper-container
 						div.swiper-wrapper
@@ -131,7 +131,6 @@ html(lang="")
 						div.deals__prices
 							h6.deals__offPrice #[del Rs 499] [30% OFF]
 							h3.deals__currentPrice Rs 350
-		div.container.m-t-2.hidden-sm-down
 			div.goQuickly
 				div.goQuickly__labelContainer
 					b.goQuickly__label Go quickly to
@@ -140,7 +139,6 @@ html(lang="")
 					each item, i in menuLinks[1]
 						li.goQuickly__item
 							+SetMenuLink(1,i,"goQuickly__link")
-		div.container
 			div.row
 				div.col-md-4.m-t-2
 					div.offCategory
@@ -212,4 +210,5 @@ html(lang="")
 							li.offCategory__item.offCategory__item
 								+Icon("arrow-triangle","offCategory__icon","white")
 								a.offCategory__link.offCategory__link--third(href="#") Small Leathers
+
 		script(src="js/main.js")

@@ -29,7 +29,6 @@
 	&__icon {
 		width: 5px;
 		height: 9px;
-		margin-left: 25%;
 		margin-right: 29px;
 		flex-shrink: 0;
 		fill: $color_accent_1;
@@ -76,7 +75,6 @@
 		}
 		&__icon {
 			display: block;
-			margin-left: 0;
 		}
 	}
 }
