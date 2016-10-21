@@ -1,6 +1,7 @@
 .offCategory {
 	text-align: center;
 	background-color: $color_content_bg_1;
+	position: relative;
 	&__header {
 		margin-bottom: 15px;
 		font-size: 24px;
@@ -58,7 +59,7 @@
 
 @include media-breakpoint-up(md) {
 	.offCategory {
-		height: 316px;
+		height: $offCategory_height;
 		padding: 13px 19px;
 		&__header {
 			@include fluidFontSize(22px, 26px, 768px, 992px);

@@ -1,0 +1,38 @@
+@include media-breakpoint-up(lg) {
+	.sideArrow {
+		$width_big_base: 35px;
+		$height_big_base: 71px;
+		$width_small_base: 20px;
+		$height_small_base: 36px;
+		$width_big: $width_big_base * $sideArrow_scale;
+		$height_big: $height_big_base * $sideArrow_scale;
+		$width_small: $width_small_base * $sideArrow_scale;
+		$height_small: $height_small_base * $sideArrow_scale;
+		$offset_small: GetPercent(3,$width_small_base);
+
+		width: $width_big ;
+		height: $height_big;
+		position: absolute;
+		top: calc(50% - (#{$height_big} / 2));
+		left: -$width_big;
+		fill: $color_accent_1;
+		transform: rotate(-180deg);
+		&__small {
+			width: $width_small;
+			height: $height_small;
+			position: absolute;
+			top: calc(50% - (#{$height_small} / 2));
+			left: -($width_small + (($offset_small / 100) * $width_small));
+			fill: #fff;
+			transform: rotate(0);
+			&--right {
+				left: calc(100% + ((#{$offset_small} / 100) * #{$width_small}));
+				transform: rotate(180deg);
+			}
+		}
+		&--right {
+			left: 100%;
+			transform: rotate(0);
+		}
+	}
+}

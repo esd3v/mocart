@@ -144,6 +144,8 @@ html(lang="")
 			div.row
 				div.col-md-4.m-t-2
 					div.offCategory
+						+Icon("arrow-triangle","sideArrow")
+						+Icon("arrow-angle","sideArrow__small")
 						h2.offCategory__header 20% off on Mobiles &amp; more.*
 						ul.offCategory__list
 							li.offCategory__item
@@ -188,7 +190,10 @@ html(lang="")
 								a.offCategory__link(href="#") Ties and Hats
 				div.col-md-4.m-t-2
 					div.offCategory.offCategory--third
+						+Icon("arrow-triangle","sideArrow","right")
+						+Icon("arrow-angle","sideArrow__small","right")
 						h2.offCategory__header.offCategory__header--third 20% off activewear &amp; more.*
+						ul.offCategory__list
 							li.offCategory__item.offCategory__item
 								+Icon("arrow-triangle","offCategory__icon","white")
 								a.offCategory__link.offCategory__link--third(href="#") Bras
