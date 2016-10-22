@@ -15,7 +15,6 @@
 	&__item {
 		display: flex;
 		align-items: center;
-		color: inherit;
 		&:not(:last-of-type) {
 			margin-bottom: 8px;
 		}
@@ -23,7 +22,7 @@
 	&__link {
 		flex-grow: 1;
 		font-size: 18px;
-		color: inherit;
+		color: #555555;
 		text-align: left;
 	}
 	&__icon {

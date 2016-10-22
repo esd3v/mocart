@@ -22,6 +22,7 @@
 	&__name {
 		margin-top: 24px;
 		font-weight: 700;
+		color: #373737;
 	}
 	&__prices {
 		display: flex;
@@ -33,5 +34,8 @@
 	&__currentPrice {
 		font-size: 32px;
 		color: $color_accent_1;
+	}
+	&__offPrice {
+		color: #373737;
 	}
 }

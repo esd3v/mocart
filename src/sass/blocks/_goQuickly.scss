@@ -13,6 +13,7 @@
 		line-height: 100%;
 		text-transform: capitalize;
 		background-color: #fff;
+		color: #080808;
 		&__labelContainer {
 			display: flex;
 			align-items: center;
@@ -20,6 +21,7 @@
 		}
 		&__label {
 			text-transform: none;
+			color: inherit;
 		}
 		&__icon {
 			width: 0.933em;
@@ -44,6 +46,7 @@
 			justify-content: center;
 		}
 		&__link {
+			color: inherit;;
 			text-align: center;
 		}
 	}
