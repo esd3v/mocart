@@ -141,6 +141,7 @@ gulp.task('jsLibs', function()
 				'src/libs/jquery/dist/jquery.min.js',
 				'src/libs/svg4everybody/dist/svg4everybody.min.js',
 				'src/libs/Swiper/dist/js/swiper.jquery.min.js',
+				'src/libs/jquery.rateit/scripts/jquery.rateit.min.js',
 			])
 			.pipe(plumber())
 			.pipe(concat('libs.js'))
