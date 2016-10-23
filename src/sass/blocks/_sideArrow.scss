@@ -17,6 +17,11 @@
 		$height_small: $height_small_base * $sideArrow_scale;
 		$offset_small: GetPercent(3,$width_small_base);
 
+		@mixin Right() {
+			left: 100%;
+			transform: rotate(0);
+		}
+
 		display: block;
 		position: absolute;
 		width: $width_big ;
@@ -40,8 +45,14 @@
 			}
 		}
 		&--right {
-			left: 100%;
-			transform: rotate(0);
+			@include Right();
+		}
+		&--orange {
+			fill: $color_accent_2;
+		}
+		&--rightOrange {
+			@include Right();
+			fill: $color_accent_2;
 		}
 	}
 }

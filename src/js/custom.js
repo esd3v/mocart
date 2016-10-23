@@ -117,3 +117,13 @@ document.querySelector('.topnav__toggleSidebar').addEventListener('click', funct
 document.querySelector('.sidebarOverlay').addEventListener('click', function() {
 	ToggleSidebar();
 });
+
+// RateIt rating
+////////////////////////////////////////////////////////
+$('.product__rating').rateit({
+	max: 5,
+	value: 4.5,
+	step: 0.5,
+	mode: "font",
+	resetable: false
+});

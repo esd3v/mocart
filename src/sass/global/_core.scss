@@ -57,6 +57,16 @@ figure {
 	background-color: $color_content_bg_1;
 }
 
+.rateit {
+	$color: #f6b800;
+	&-selected {
+		color: $color !important;
+	}
+	&-hover {
+		color: darken($color,25%) !important;
+	}
+}
+
 // Global Media
 ///////////////////////////////////////////////////////////
 @include media-breakpoint-down(sm) {
