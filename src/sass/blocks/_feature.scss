@@ -4,22 +4,26 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px 0;
-	color: #4b4b4b;
+	color: inherit;
 	font-family: "Lato";
 	text-transform: uppercase;
+	font-size: 18px;
+	color: #4b4b4b;
+	fill: $color_accent_1;
 	&__title {
-		font-size: 18px;
+		font-size: inherit;
 		font-weight: 700;
+		letter-spacing: PS_GetLetterSpacing(50);
 	}
 	&__description {
-		font-size: 16px;
+		font-size: 0.8666666666666667em;
 		text-transform: capitalize;
 	}
 	&__icon {
-		$size: 48px;
+		$size: 2.6666666666666663em;
 		width: $size;
 		height: $size;
-		fill: $color_accent_1;
+		fill: inherit;
 	}
 }
 
@@ -38,19 +42,16 @@
 		flex-direction: row;
 		justify-content: center;
 		padding: 0;
+		font-size: 15px;
 		&__textBlock {
 			padding-top: 6px;
 		}
 		&__title {
 			margin-top: 0;
-			font-size: 15px;
-		}
-		&__description {
-			font-size: 13px;
 		}
 		&__icon {
-			margin-right: 24px;
-			$size: 32px;
+			margin-right: 1.6em;
+			$size: 2.1333333333333334em;
 			width: $size;
 			height: $size;
 		}
@@ -63,16 +64,19 @@
 		align-items: flex-start;
 		&__icon {
 			&--plane {
-				width: 24px;
-				height: 24px;
+				$size: 1.60em;
+				width: $size;
+				height: $size;
 			}
 			&--time {
-				width: 26px;
-				height: 26px;
+				$size: 1.7333333333333334em;
+				width: $size;
+				height: $size;
 			}
 			&--lifePreserver {
-				width: 30px;
-				height: 30px;
+				$size: 2.0em;
+				width: $size;
+				height: $size;
 			}
 		}
 	}
