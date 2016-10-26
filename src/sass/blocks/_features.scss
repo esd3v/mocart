@@ -4,6 +4,9 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px 0;
+	&--bottom {
+		padding: 28px 0;
+	}
 }
 
 @include media-breakpoint-up(sm) {
@@ -15,5 +18,8 @@
 @include media-breakpoint-up(xl) {
 	.features {
 		justify-content: center;
+		&--bottom {
+			justify-content: space-between;
+		}
 	}
 }

@@ -10,6 +10,10 @@
 	font-size: 18px;
 	color: #4b4b4b;
 	fill: $color_accent_1;
+	&--bottom {
+		color: #fff;
+		fill: #fff;
+	}
 	&__title {
 		font-size: inherit;
 		font-weight: 700;
@@ -58,6 +62,14 @@
 	}
 }
 
+@include media-breakpoint-up(lg) {
+	.feature {
+		&--bottom {
+			font-size: 21px;
+		}
+	}
+}
+
 @include media-breakpoint-up(xl) {
 	.feature {
 		width: 28%;
@@ -78,6 +90,9 @@
 				width: $size;
 				height: $size;
 			}
+		}
+		&--bottom {
+			width: auto;
 		}
 	}
 }
