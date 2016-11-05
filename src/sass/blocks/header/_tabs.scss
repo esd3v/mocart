@@ -12,7 +12,7 @@
 		border-bottom-color: $color_content_bg_2;
 		&:hover {
 			border-bottom-color: #379aff;
-			transition: border-bottom-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+			// transition: border-bottom-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 		}
 	}
 }

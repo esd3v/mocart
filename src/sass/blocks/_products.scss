@@ -1,5 +1,5 @@
 .products {
-	margin-top: map-get(map-get($spacers,3),y);
+	margin-top: Spacer(3,y);
 	&__header {
 		color: #32302f;
 		font-size: 24px;
