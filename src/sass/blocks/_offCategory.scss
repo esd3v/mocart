@@ -41,13 +41,15 @@
 		}
 		&__list {
 			display: flex;
+			flex-wrap: wrap;
 		}
 		&__item {
 			margin: 0 8px;
+			flex-grow: 9999;
 		}
 		&__link {
 			flex-grow: 0;
-			text-align: center;
+			margin: auto;
 		}
 		&__icon {
 			display: none;
@@ -69,6 +71,7 @@
 			margin: 0;
 		}
 		&__link {
+			margin: 0;
 			flex-grow: 1;
 			text-align: left;
 		}
