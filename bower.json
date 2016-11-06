@@ -21,6 +21,7 @@
     "bootstrap": "4.0.0-alpha.4",
     "svg4everybody": "^2.1.1",
     "Swiper": "swiper#^3.3.1",
-    "jquery.rateit": "^1.1.1"
+    "jquery.rateit": "^1.1.1",
+    "picturefill": "^3.0.2"
   }
 }
