@@ -1,0 +1,17 @@
+.footerCategories {
+	padding: 58px 0;
+}
+
+@include media-breakpoint-up(md) {
+	.footerCategories {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.footerCategories {
+		flex-wrap: nowrap;
+	}
+}

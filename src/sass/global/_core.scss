@@ -53,10 +53,15 @@ figure {
 	fill: #fff;
 }
 
-.partFeatures {
-	background-color: $color_content_bg_1;
-	&--bottom {
-		background-color: $color_content_bg_4;
+.part {
+	&Features {
+		background-color: $color_content_bg_1;
+		&--bottom {
+			background-color: $color_content_bg_4;
+		}
+	}
+	&FooterCategories {
+		background-color: $color_content_bg_2;
 	}
 }
 
