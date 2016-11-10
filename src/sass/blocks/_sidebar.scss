@@ -32,8 +32,7 @@
 			color: #d9d71a;
 		}
 		&:hover {
-			background-color: lighten($color_content_bg_2, 20%);
-			transition: background-color 0.1s ease;
+			background-color: lighten($color_content_bg_2, 10%);
 		}
 	}
 	&__number {
