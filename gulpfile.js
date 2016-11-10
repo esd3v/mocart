@@ -235,7 +235,7 @@ gulp.task('build_after', function()
 
 	// Move custom files to dist folder
 	return gulp.src([
-				// "",
+				'src/*.*',
 			])
 			.pipe(gulp.dest("dist/"));
 });
