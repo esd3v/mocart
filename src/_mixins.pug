@@ -1,0 +1,54 @@
+mixin Icon(path,isColored,className,modLocal)
+	- require(`assets/icons/${isColored ? `colored/` : ''}${path}.svg`);
+
+	- modGlobal = "icon--" + path + " "
+	if modLocal
+		- modLocal = " " + className + "--" + modLocal
+	else
+		- modLocal = ""
+	svg(class="icon " + modGlobal + className + modLocal)
+		use(xlink:href=`assets/sprite.svg#${path}`)
+-
+	var slides = [
+		{name: "slide_1",url: "#"},
+		{name: "slide_2",url: "#"},
+		{name: "slide_3",url: "#"},
+		{name: "slide_4",url: "#"},
+	];
+mixin Slide(name,url)
+	- var xl = 1200
+	- var lg = 992
+	- var md = 768
+	- var sm = 544
+	div.swiper-slide
+		a(href=url)
+			picture.slideContent
+				source.slideContent__image(srcset=require("assets/images/" + name + "_" + xl + ".jpg") media="(min-width: " + xl + "px)")
+				source.slideContent__image(srcset=require("assets/images/" + name + "_" + lg + ".jpg") media="(min-width: " + lg + "px)")
+				source.slideContent__image(srcset=require("assets/images/" + name + "_" + md + ".jpg") media="(min-width: " + md + "px)")
+				source.slideContent__image(srcset=require("assets/images/" + name + "_" + sm + ".jpg") media="(min-width: " + sm + "px)")
+				img.slideContent__image(src=require("assets/images/" + name + "_" + md + ".jpg") alt="Product")
+-
+	var menuLinks = [[
+			{label: "Contact Us",url: "#"},
+			{label: "Help",url: "#"},
+		],
+		[
+			{label: "Mobiles",url: "#"},
+			{label: "Sports",url: "#"},
+			{label: "Tables",url: "#"},
+			{label: "Bath towels",url: "#"},
+			{label: "LED bulbs",url: "#"},
+			{label: "TV",url: "#"},
+			{label: "Washing machines",url: "#"},
+			{label: "Laptops",url: "#"},
+			{label: "Headphones",url: "#"},
+			{label: "Fans",url: "#"},
+			{label: "Travel",url: "#"},
+			{label: "Books",url: "#"},
+		]];
+
+mixin SetMenuLink(type,index,className)
+	-var label = menuLinks[type][index].label;
+	-var url = menuLinks[type][index].url;
+	a(class=className href=url)= label

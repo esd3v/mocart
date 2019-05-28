@@ -88,7 +88,7 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
-		background-image: url("../img/offcat_1.jpg");
+		background-image: url("../assets/images/offcat_1.jpg");
 		&__header {
 			width: 80%;
 			font-size: 32px;
@@ -125,10 +125,10 @@
 			}
 		}
 		&--second {
-			background-image: url("../img/offcat_2.jpg");
+			background-image: url("../assets/images/offcat_2.jpg");
 		}
 		&--third {
-			background-image: url("../img/offcat_3.jpg");
+			background-image: url("../assets/images/offcat_3.jpg");
 		}
 	}
 }

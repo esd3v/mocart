@@ -1,18 +1,21 @@
-@import "../libs/normalize-css/normalize";
-@import "../libs/Swiper/dist/css/swiper.min";
-@import "../libs/jquery.rateit/scripts/rateit";
+@import "~normalize.css/normalize.css";
+@import "~swiper/dist/css/swiper.min.css";
+@import "~jquery.rateit/scripts/rateit.css";
 
-@import "../libs/bootstrap/scss/variables";
-@import "../libs/bootstrap/scss/custom";
-@import "../libs/bootstrap/scss/mixins";
-@import "../libs/bootstrap/scss/grid";
-@import "../libs/bootstrap/scss/utilities/flex";
-@import "../libs/bootstrap/scss/utilities/spacing";
-@import "../libs/bootstrap/scss/utilities/visibility";
+@import "global/overrides";
+
+@import "~bootstrap/scss/_variables";
+@import "~bootstrap/scss/_custom";
+@import "~bootstrap/scss/_mixins";
+@import "~bootstrap/scss/_grid";
+@import "~bootstrap/scss/utilities/_flex";
+@import "~bootstrap/scss/utilities/_spacing";
+@import "~bootstrap/scss/utilities/_visibility";
 
 @import "global/variables";
 @import "global/mixins";
 @import "global/core";
+@import "global/fonts";
 
 @import "blocks/header/header";
 @import "blocks/header/support";

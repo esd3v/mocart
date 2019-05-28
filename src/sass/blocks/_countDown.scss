@@ -4,7 +4,11 @@
 	list-style: none;
 	&__digits {
 		color: #fff;
-		font-size: 28px;
+    font-size: 28px;
+      // Optimize timer
+      transform: translateZ(0);
+      z-index:1;
+      will-change: transform;
 		&:not(:first-of-type) {
 			&::before {
 				content: ":";

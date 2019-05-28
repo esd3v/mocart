@@ -1,0 +1,451 @@
+include _mixins.pug
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="description", content="")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		title MoCart — eCommerce PSD Template
+	body
+		header.topnav
+			button.topnav__toggleSidebar
+				+Icon("menu",false,"topnav__icon")
+		nav.sidebar
+			ul.sidebar__menu
+				li.sidebar__menuItem.sidebar__menuItem--header Support
+				li.sidebar__menuItem #[a.sidebar__menuLink(href="tel:+180012345678") Contact: #[span.sidebar__number +1800 1234 5678]]
+				each item, i in menuLinks[0]
+					li.sidebar__menuItem
+						+SetMenuLink(0,i,"sidebar__menuLink")
+				li.sidebar__menuIte.sidebar__menuItem--header Go Quickly
+				each item, i in menuLinks[1]
+					li.sidebar__menuItem
+						+SetMenuLink(1,i,"sidebar__menuLink")
+		div.sidebarOverlay
+		header.header
+			div.container
+				div.row.hidden-sm-down
+					div.col-md-12
+						address.support
+							button.support__collapse Support
+							ul.support__menu
+								li.support__item Contact &amp; support: #[a.support__link.support__link--number(href="tel:+18001235678") +1800 1234 5678]
+								each item, i in menuLinks[0]
+									li.support__item
+										+SetMenuLink(0,i,"support__link")
+			div.header__middle
+				div.container
+					div.row.flex-items-xs-bottom.p-b-2.p-t-1
+						div.col-md-3.col-lg-2
+							+Icon("logo",true,"logo")
+						div.col-md-9.col-lg-10.col-xl-6
+							form.searchbar(action="search.php" method="GET")
+								select.searchbar__categories(name="category")
+									option.searchbar__category(value="all" selected) All categories
+									option.searchbar__category(value="fashion") Fashion
+									option.searchbar__category(value="booksmedia") Books &amp; media
+									option.searchbar__category(value="clearance") Clearance
+									option.searchbar__category(value="mobile") Mobile phones
+								div.searchbar__search
+									input.searchbar__input(type="search" name="search" placeholder="Search entire store here...")
+									button.searchbar__button(type="submit")
+										+Icon("search",false,"searchbar__icon")
+						div.col-xs-12.col-xl-4
+							div.userbar
+								ul.account
+									li.account__item
+										a.account__link.account__link--myAccount(href="#")
+											+Icon("user",false,"account__icon")
+											span.account__label My account
+									li.account__item
+										a.account__link.account__link--trackOrder(href="#")
+											+Icon("map-marker",false,"account__icon")
+											span.account__label Track order
+									li.account__item
+										a.account__link.account__link--login(href="#")
+											+Icon("padlock",false,"account__icon")
+											span.account__label Login
+								button.cart
+									span.cart__container
+										+Icon("shopping-cart",false,"cart__icon")
+										span.cart__count 0
+										+Icon("arrow-angle",false,"cart__icon","arrow")
+			div.header__bottom
+				div.container
+					div.row
+						div.col-lg-12
+							nav.filter
+								button.shopEverything
+									span.shopEverything__container
+										span.shopEverything__label Shop everything
+										+Icon("arrow-chevron",false,"shopEverything__icon","arrow")
+								div.tabs
+									a.tabs__tab(href="#") Fashion store
+									a.tabs__tab(href="#") Books &amp; media
+									a.tabs__tab(href="#") Clearance sale
+									a.tabs__tab(href="#") Mobile phones
+		div.partFeatures
+			div.container
+				div.features
+					div.feature
+						+Icon("plane",false,"feature__icon","plane")
+						div.feature__textBlock
+							h5.feature__title Free shipping
+							h6.feature__description In order min $200
+					div.feature
+						+Icon("time",false,"feature__icon","time")
+						div.feature__textBlock
+							h4.feature__title 30-days returns
+							h5.feature__description Money back guarantee
+					div.feature
+						+Icon("life-preserver",false,"feature__icon","lifePreserver")
+						div.feature__textBlock
+							h4.feature__title 24/7 support
+							h5.feature__description Lifestyme support
+		div.container.m-t-2.m-b-3
+			div.row
+				div.col-md-6.col-xl-8
+					div.swiper-container
+						div.swiper-wrapper
+							each slide, i in slides
+								+Slide(slides[i].name,slides[i].url)
+				div.col-md-6.col-xl-4
+					div.deals
+						h1.deals__title Today's deals
+						h4.deals__endIn End in
+						ul.countDown
+							li.countDown__digits #[span.countDown__digit.countDown__digit--hours]
+							li.countDown__digits #[span.countDown__digit.countDown__digit--minutes]
+							li.countDown__digits #[span.countDown__digit.countDown__digit--seconds]
+						img.deals__photo(src=require('assets/images/deals.png') width="172" height="137" alt="Samsung 16GB MicroSD Class 6")
+						h5.deals__name Samsung 16GB MicroSD Class 6
+						div.deals__prices
+							h6.deals__offPrice #[del Rs 499] [30% OFF]
+							h3.deals__currentPrice Rs 350
+			div.goQuickly
+				div.goQuickly__labelContainer
+					b.goQuickly__label Go quickly to
+					+Icon("arrow-circle",false,"goQuickly__icon")
+				ul.goQuickly__list
+					each item, i in menuLinks[1]
+						li.goQuickly__item
+							+SetMenuLink(1,i,"goQuickly__link")
+			div.row
+				div.col-md-4.m-t-2
+					div.offCategory
+						+Icon("arrow-triangle",false,"sideArrow")
+						+Icon("arrow-angle",false,"sideArrow__small")
+						h2.offCategory__header 20% off on Mobiles &amp; more.*
+						ul.offCategory__list
+							li.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon")
+								a.offCategory__link(href="#") Apple Mobile
+							li.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon")
+								a.offCategory__link(href="#") Samsung Mobile
+							li.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon")
+								a.offCategory__link(href="#") Micromax Mobile
+							li.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon")
+								a.offCategory__link(href="#") Nokia Mobile
+							li.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon")
+								a.offCategory__link(href="#") HTC Mobile
+							li.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon")
+								a.offCategory__link(href="#") Sony Mobile
+				div.col-md-4.m-t-2
+					div.offCategory.offCategory--second
+						h2.offCategory__header.offCategory__header--second 50% off on Fashion wear &amp; more.*
+						ul.offCategory__list
+							li.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon")
+								a.offCategory__link(href="#") Bags and Wallets
+							li.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon")
+								a.offCategory__link(href="#") Belts
+							li.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon")
+								a.offCategory__link(href="#") Bootees
+							li.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon")
+								a.offCategory__link(href="#") Cold Weather
+							li.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon")
+								a.offCategory__link(href="#") Jewelry
+							li.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon")
+								a.offCategory__link(href="#") Ties and Hats
+				div.col-md-4.m-t-2
+					div.offCategory.offCategory--third
+						+Icon("arrow-triangle",false,"sideArrow","right")
+						+Icon("arrow-angle",false,"sideArrow__small","right")
+						h2.offCategory__header.offCategory__header--third 20% off activewear &amp; more.*
+						ul.offCategory__list
+							li.offCategory__item.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon","white")
+								a.offCategory__link.offCategory__link--third(href="#") Bras
+							li.offCategory__item.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon","white")
+								a.offCategory__link.offCategory__link--third(href="#") Hair Accessories
+							li.offCategory__item.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon","white")
+								a.offCategory__link.offCategory__link--third(href="#") Hars and Gloves
+							li.offCategory__item.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon","white")
+								a.offCategory__link.offCategory__link--third(href="#") Lifestyle
+							li.offCategory__item.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon","white")
+								a.offCategory__link.offCategory__link--third(href="#") Scarves
+							li.offCategory__item.offCategory__item
+								+Icon("arrow-triangle",false,"offCategory__icon","white")
+								a.offCategory__link.offCategory__link--third(href="#") Small Leathers
+			div.products
+				h2.products__header Leatest products
+				div.products__container
+					+Icon("arrow-triangle",false,"sideArrow","orange")
+					+Icon("arrow-angle",false,"sideArrow__small")
+					+Icon("arrow-triangle",false,"sideArrow","rightOrange")
+					+Icon("arrow-angle",false,"sideArrow__small","right")
+					div.product
+						img.product__photo(src=require("assets/images/product_1.jpg") width="132" height="160" alt="Product #1")
+						h5.product__name Samsung 16GB MicroSD Class 6
+						div.product__rating
+						h6.product__offPrice #[del Rs 499] [30% OFF]
+						h3.product__currentPrice Rs 350
+					div.product
+						img.product__photo(src=require("assets/images/product_2.jpg") width="132" height="160" alt="Product #2")
+						h5.product__name Samsung 16GB MicroSD Class 6
+						div.product__rating
+						h6.product__offPrice #[del Rs 499] [30% OFF]
+						h3.product__currentPrice Rs 350
+					div.product
+						img.product__photo(src=require("assets/images/product_3.jpg") width="132" height="160" alt="Product #2")
+						h5.product__name Samsung 16GB MicroSD Class 6
+						div.product__rating
+						h6.product__offPrice #[del Rs 499] [30% OFF]
+						h3.product__currentPrice Rs 350
+					div.product
+						img.product__photo(src=require("assets/images/product_4.jpg") width="132" height="160" alt="Product #3")
+						h5.product__name Samsung 16GB MicroSD Class 6
+						div.product__rating
+						h6.product__offPrice #[del Rs 499] [30% OFF]
+						h3.product__currentPrice Rs 350
+					div.product
+						img.product__photo(src=require("assets/images/product_5.jpg") width="132" height="160" alt="Product #5")
+						h5.product__name Samsung 16GB MicroSD Class 6
+						div.product__rating
+						h6.product__offPrice #[del Rs 499] [30% OFF]
+						h3.product__currentPrice Rs 350
+			div.products
+				h2.products__header Clearance Sale
+				div.products__container
+					+Icon("arrow-triangle",false,"sideArrow","orange")
+					+Icon("arrow-angle",false,"sideArrow__small")
+					+Icon("arrow-triangle",false,"sideArrow","rightOrange")
+					+Icon("arrow-angle",false,"sideArrow__small","right")
+					div.product
+						img.product__photo(src=require("assets/images/product_1.jpg") width="132" height="160" alt="Product #1")
+						h5.product__name Samsung 16GB MicroSD Class 6
+						div.product__rating
+						h6.product__offPrice #[del Rs 499] [30% OFF]
+						h3.product__currentPrice Rs 350
+					div.product
+						img.product__photo(src=require("assets/images/product_2.jpg") width="132" height="160" alt="Product #2")
+						h5.product__name Samsung 16GB MicroSD Class 6
+						div.product__rating
+						h6.product__offPrice #[del Rs 499] [30% OFF]
+						h3.product__currentPrice Rs 350
+					div.product
+						img.product__photo(src=require("assets/images/product_3.jpg") width="132" height="160" alt="Product #2")
+						h5.product__name Samsung 16GB MicroSD Class 6
+						div.product__rating
+						h6.product__offPrice #[del Rs 499] [30% OFF]
+						h3.product__currentPrice Rs 350
+					div.product
+						img.product__photo(src=require("assets/images/product_4.jpg") width="132" height="160" alt="Product #3")
+						h5.product__name Samsung 16GB MicroSD Class 6
+						div.product__rating
+						h6.product__offPrice #[del Rs 499] [30% OFF]
+						h3.product__currentPrice Rs 350
+					div.product
+						img.product__photo(src=require("assets/images/product_5.jpg") width="132" height="160" alt="Product #5")
+						h5.product__name Samsung 16GB MicroSD Class 6
+						div.product__rating
+						h6.product__offPrice #[del Rs 499] [30% OFF]
+						h3.product__currentPrice Rs 350
+			div.products
+				h2.products__header Your Recently Viewed items
+				div.products__container
+					+Icon("arrow-triangle",false,"sideArrow","orange")
+					+Icon("arrow-angle",false,"sideArrow__small")
+					+Icon("arrow-triangle",false,"sideArrow","rightOrange")
+					+Icon("arrow-angle",false,"sideArrow__small","right")
+					div.product
+						img.product__photo(src=require("assets/images/product_1.jpg") width="132" height="160" alt="Product #1")
+						h5.product__name Samsung 16GB MicroSD Class 6
+						div.product__rating
+						h6.product__offPrice #[del Rs 499] [30% OFF]
+						h3.product__currentPrice Rs 350
+					div.product
+						img.product__photo(src=require("assets/images/product_2.jpg") width="132" height="160" alt="Product #2")
+						h5.product__name Samsung 16GB MicroSD Class 6
+						div.product__rating
+						h6.product__offPrice #[del Rs 499] [30% OFF]
+						h3.product__currentPrice Rs 350
+					div.product
+						img.product__photo(src=require("assets/images/product_3.jpg") width="132" height="160" alt="Product #2")
+						h5.product__name Samsung 16GB MicroSD Class 6
+						div.product__rating
+						h6.product__offPrice #[del Rs 499] [30% OFF]
+						h3.product__currentPrice Rs 350
+					div.product
+						img.product__photo(src=require("assets/images/product_4.jpg") width="132" height="160" alt="Product #3")
+						h5.product__name Samsung 16GB MicroSD Class 6
+						div.product__rating
+						h6.product__offPrice #[del Rs 499] [30% OFF]
+						h3.product__currentPrice Rs 350
+					div.product
+						img.product__photo(src=require("assets/images/product_5.jpg") width="132" height="160" alt="Product #5")
+						h5.product__name Samsung 16GB MicroSD Class 6
+						div.product__rating
+						h6.product__offPrice #[del Rs 499] [30% OFF]
+						h3.product__currentPrice Rs 350
+		div.partFeatures.partFeatures--bottom
+			div.container
+				div.features.features--bottom
+					div.feature.feature--bottom
+						+Icon("plane",false,"feature__icon","plane")
+						div.feature__textBlock
+							h5.feature__title Free shipping
+							h6.feature__description In order min Rs.500
+					div.feature.feature--bottom
+						+Icon("time",false,"feature__icon","time")
+						div.feature__textBlock
+							h4.feature__title 30-days returns
+							h5.feature__description Money back guarantee
+					div.feature.feature--bottom
+						+Icon("life-preserver",false,"feature__icon","lifePreserver")
+						div.feature__textBlock
+							h4.feature__title 24/7 support
+							h5.feature__description Call +1800 1234 567
+		div.partFooterCategories
+			div.container
+				div.footerCategories
+					div.footerCategory
+						h4.footerCategory__header Help
+						ul.footerCategory__list
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Contact Customer Service
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") ScoreCard
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Product Availability
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Recalls
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Return Policy
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Shipping Rates
+					div.footerCategory
+						h4.footerCategory__header Company
+						ul.footerCategory__list
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") About Us
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Affiliate Program
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Careers
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Gift Shop
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Group Sales
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Contact us
+					div.footerCategory
+						h4.footerCategory__header My account
+						ul.footerCategory__list
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Your Account
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Information
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Addresses
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Orders history
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Delivery information
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Search terms
+					div.footerCategory
+						h4.footerCategory__header Informations
+						ul.footerCategory__list
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Terms and conditions
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") About us
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Sitemap
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Contact
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Return policy
+							li.footerCategory__item
+								+Icon("arrow-triangle",false,"footerCategory__icon")
+								a.footerCategory__link(href="#") Suppliers
+					div.footerCategory
+						h4.footerCategory__header Sale news
+						p.footerCategory__news Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+						form.newsletterSignUp(action="newsletter.php" method="POST")
+							input.newsletterSignUp__input(type="email" name="email" placeholder="Sign up for our Newsletter!")
+							button.newsletterSignUp__button(type="submit")
+								span.newsletterSignUp__buttonContainer
+									+Icon("envelope",false,"newsletterSignUp__icon")
+						div.followUs
+							h4.followUs__header Follow us
+							div.followUs__icons
+								a.followUs__link(href="#")
+									+Icon("facebook",false,"followUs__icon")
+								a.followUs__link(href="#")
+									+Icon("youtube",false,"followUs__icon")
+								a.followUs__link(href="#")
+									+Icon("twitter",false,"followUs__icon")
+								a.followUs__link(href="#")
+									+Icon("linkedin",false,"followUs__icon")
+		footer.partFooterBottom
+			div.container
+				div.footerBottom
+					p.footerBottom__copyright Copyright © 2015 mocart.com All rights reserved.
+					div.footerBottom__creditCards
+						+Icon("card_discover",true,"footerBottom__creditCard")
+						+Icon("card_maestro",true,"footerBottom__creditCard")
+						+Icon("card_mastercard",true,"footerBottom__creditCard")
+						+Icon("card_paypal",true,"footerBottom__creditCard")
+						+Icon("card_visa",true,"footerBottom__creditCard")
+					p.footerBottom__designBy Design by: #[img.footerBottom__bee(src=require("assets/images/bee.png") width="29" height="26" alt="Bee")] PSDFreebies.com
