@@ -1,6 +1,6 @@
 export const countdown = () => {
-	const timer = [0, 1, 15, 45];
-	const totalMsec = ((((((timer[0] * 24) + timer[1]) * 60) + timer[2]) * 60) + timer[3] ) * 1000;
+  const timer = [0, 1, 15, 45];
+  const totalMsec = ((((((timer[0] * 24) + timer[1]) * 60) + timer[2]) * 60) + timer[3] ) * 1000;
   const endDate = new Date(Date.now() + totalMsec);
   const hoursEl = document.getElementsByClassName('countDown__digit--hours')[0];
   const minutesEl = document.getElementsByClassName('countDown__digit--minutes')[0];
@@ -15,7 +15,7 @@ export const countdown = () => {
   setText(minutesEl, timer[2]);
   setText(secondsEl, timer[3]);
 
-	const decrease = () => {
+  const decrease = () => {
     const totalRem = Date.parse(endDate) - Date.parse(new Date());
     // const daysRem = Math.floor(totalRem / (1000 * 60 * 60 * 24));
     const hoursRem = Math.floor((totalRem / (1000 * 60 * 60)) % 24);

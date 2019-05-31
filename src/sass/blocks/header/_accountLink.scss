@@ -12,23 +12,23 @@
     fill: $color_accent_2;
   }
   &__label {
-		order: 1;
-	}
-	&__icon {
-		order: 2;
-		fill: inherit;
-	}
+    order: 1;
+  }
+  &__icon {
+    order: 2;
+    fill: inherit;
+  }
 }
 
 @include media-breakpoint-up(md) {
-	.accountLink {
+  .accountLink {
     padding: 0;
     margin: 0;
     flex-direction: column;
     &__label {
-			order: 2;
-			margin-top: 10px;
-			margin-left: 0;
-		}
-	}
+      order: 2;
+      margin-top: 10px;
+      margin-left: 0;
+    }
+  }
 }

@@ -2,38 +2,38 @@
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 @mixin fluidFontSize($f-min, $f-max, $w-min, $w-max, $fallback: false) {
-	font-size: $f-min;
+  font-size: $f-min;
 
-	@media (min-width: $w-min) {
- 		@if ($fallback) {
-			font-size: $fallback;
- 		}
-		font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px);
-	}
-	@media (min-width: $w-max) {
-		font-size: $f-max;
-	}
+  @media (min-width: $w-min) {
+     @if ($fallback) {
+      font-size: $fallback;
+     }
+    font-size: calcFluidFontSize($f-min, $f-max, $w-min, $w-max, px);
+  }
+  @media (min-width: $w-max) {
+    font-size: $f-max;
+  }
 }
 
 @function calcFluidFontSize($f-min, $f-max, $w-min, $w-max, $units: px) {
-	$f-min: strip-unit($f-min);
-	$f-max: strip-unit($f-max);
-	$w-min: strip-unit($w-min);
-	$w-max: strip-unit($w-max);
+  $f-min: strip-unit($f-min);
+  $f-max: strip-unit($f-max);
+  $w-min: strip-unit($w-min);
+  $w-max: strip-unit($w-max);
 
-	$k: ($f-max - $f-min)/($w-max - $w-min);
-	$b: $f-min - $k * $w-min;
+  $k: ($f-max - $f-min)/($w-max - $w-min);
+  $b: $f-min - $k * $w-min;
 
-	$b: $b + $units;
+  $b: $b + $units;
 
-	@return calc( #{$k} * 100vw + #{$b} );
+  @return calc( #{$k} * 100vw + #{$b} );
 }
 
 // Boostrap-based functions
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 @function Spacer($size, $side) {
-	@return map-get(map-get($spacers, $size), $side);
+  @return map-get(map-get($spacers, $size), $side);
 }
 
 // Misc
@@ -45,60 +45,60 @@
 }
 
 @mixin SetButton() {
-	$buttonColor: $color_accent_2;
-	$buttonTransitionSpeed: 0.3s;
-	$buttonTransitionType: ease-out;
-	color: #fff;
-	font-weight: 700;
-	border-radius: 6px;
-	background-color: $buttonColor;
-	transition: all $buttonTransitionSpeed $buttonTransitionType;
-	&:hover {
-		background-color: lighten($buttonColor,5);
-		transition: all $buttonTransitionSpeed $buttonTransitionType;
-	}
+  $buttonColor: $color_accent_2;
+  $buttonTransitionSpeed: 0.3s;
+  $buttonTransitionType: ease-out;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 6px;
+  background-color: $buttonColor;
+  transition: all $buttonTransitionSpeed $buttonTransitionType;
+  &:hover {
+    background-color: lighten($buttonColor,5);
+    transition: all $buttonTransitionSpeed $buttonTransitionType;
+  }
 }
 
 @mixin Accordion_SetBorder() {
-	$border: 1px dotted rgba(0,0,0,1.0);
-	&:first-of-type {
-		border-top: $border;
-	}
-	border-bottom: $border;
+  $border: 1px dotted rgba(0,0,0,1.0);
+  &:first-of-type {
+    border-top: $border;
+  }
+  border-bottom: $border;
 }
 
 @function strip-unit($number) {
-	@if type-of($number) == 'number' and not unitless($number) {
-	  @return $number / ($number * 0 + 1);
-	}
-	@return $number;
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
 }
 
 @function PS_GetLetterSpacing($trackingValue) {
-	@return ($trackingValue / 1000)+em;
+  @return ($trackingValue / 1000)+em;
 }
 
 @function GetPercent($val1,$val2) {
-	@return (strip-unit($val1)/strip-unit($val2))*100;
+  @return (strip-unit($val1)/strip-unit($val2))*100;
 }
 
 // Media Queries
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 @mixin ScreenUp($number) {
-	@if (unitless($number)) {
-		$number: $number+px;
-	}
-	@media (min-width: $number) {
-		@content;
-	}
+  @if (unitless($number)) {
+    $number: $number+px;
+  }
+  @media (min-width: $number) {
+    @content;
+  }
 }
 
 @mixin ScreenDown($number) {
-	@if (unitless($number)) {
-		$number: $number+px;
-	}
-	@media (max-width: $number) {
-		@content;
-	}
+  @if (unitless($number)) {
+    $number: $number+px;
+  }
+  @media (max-width: $number) {
+    @content;
+  }
 }

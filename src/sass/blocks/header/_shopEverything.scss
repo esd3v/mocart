@@ -1,29 +1,29 @@
 .shopEverything {
-	@include SetButton();
-	width: 100%;
-	padding: 15px;
-	text-transform: uppercase;
-	&__container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	&__icon {
-		margin-left: 10px;
-	}
+  @include SetButton();
+  width: 100%;
+  padding: 15px;
+  text-transform: uppercase;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__icon {
+    margin-left: 10px;
+  }
 }
 
 @include media-breakpoint-up(md) {
-	.shopEverything {
-		width: auto;
-		padding: 10px;
-		font-size: 14px;
-		align-self: center;
-	}
+  .shopEverything {
+    width: auto;
+    padding: 10px;
+    font-size: 14px;
+    align-self: center;
+  }
 }
 
 @include media-breakpoint-up(lg) {
-	.shopEverything {
-		width: 203px;
-	}
+  .shopEverything {
+    width: 203px;
+  }
 }

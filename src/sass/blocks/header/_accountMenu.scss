@@ -1,7 +1,7 @@
 .accountMenu {
   display: flex;
-	flex-direction: column;
-	justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   &__links {
     display: flex;
     flex-direction: column;
@@ -11,32 +11,32 @@
 }
 
 @include media-breakpoint-up(md) {
-	.accountMenu {
+  .accountMenu {
     margin-top: 32px;
-		flex-direction: row;
+    flex-direction: row;
     justify-content: space-between;
     flex-basis: 100%;
     &__links {
       flex-direction: row;
       justify-content: flex-start;
     }
-		&__link {
-			display: flex;
-			align-items: center;
-			&:not(:first-of-type) {
-				&::before {
-					content: "|";
-					margin: 0 10px;
-					color: #a8a8a8;
-				}
-			}
-		}
-	}
+    &__link {
+      display: flex;
+      align-items: center;
+      &:not(:first-of-type) {
+        &::before {
+          content: "|";
+          margin: 0 10px;
+          color: #a8a8a8;
+        }
+      }
+    }
+  }
 }
 
 @include media-breakpoint-up(xl) {
-	.accountMenu {
+  .accountMenu {
     margin-top: 0;
     flex-basis: 30%;
-	}
+  }
 }

@@ -1,14 +1,14 @@
 .logo {
-	width: auto;
-	height: 120px;
-	display: block;
-	margin-bottom: Spacer(1,y);
+  width: auto;
+  height: 120px;
+  display: block;
+  margin-bottom: Spacer(1,y);
 }
 
 @include media-breakpoint-up(md) {
-	.logo {
+  .logo {
     width: 156px;
-		height: 60px;
-		margin-bottom: 0;
-	}
+    height: 60px;
+    margin-bottom: 0;
+  }
 }

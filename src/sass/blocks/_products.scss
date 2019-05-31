@@ -1,47 +1,47 @@
 .products {
-	margin-top: Spacer(3,y);
-	&__header {
-		color: #32302f;
-		font-size: 24px;
-		text-align: center;
-	}
-	&__container {
-		display: flex;
-		flex-direction: column;
-		margin-top: 15px;
-		border-top: 4px solid $color_accent_1;
-		background-color: $color_content_bg_1;
-	}
+  margin-top: Spacer(3,y);
+  &__header {
+    color: #32302f;
+    font-size: 24px;
+    text-align: center;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    border-top: 4px solid $color_accent_1;
+    background-color: $color_content_bg_1;
+  }
 }
 
 @include media-breakpoint-up(sm) {
-	.products {
-		&__container {
-			flex-direction: row;
-			flex-wrap: wrap;
-		}
-		&__header {
-			text-align: left;
-			font-size: 32px;
-		}
-	}
+  .products {
+    &__container {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    &__header {
+      text-align: left;
+      font-size: 32px;
+    }
+  }
 }
 
 @include media-breakpoint-up(lg) {
-	.products {
-		&__container {
-			flex-wrap: nowrap;
-			justify-content: space-between;
-			position: relative;
-			padding: 15px;
-		}
-	}
+  .products {
+    &__container {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      position: relative;
+      padding: 15px;
+    }
+  }
 }
 
 @include media-breakpoint-up(xl) {
-	.products {
-		&__container {
-			padding: 15px 36px 24px 36px;
-		}
-	}
+  .products {
+    &__container {
+      padding: 15px 36px 24px 36px;
+    }
+  }
 }

@@ -1,53 +1,53 @@
 .sideArrow {
-	display: none;
-	&__small {
-		display: none;
-	}
+  display: none;
+  &__small {
+    display: none;
+  }
 }
 
 @include media-breakpoint-up(lg) {
-	.sideArrow {
+  .sideArrow {
     $sideArrow_scale: 1;
 
-		$width_big_base: 35px;
-		$height_big_base: 71px;
-		$width_big: $width_big_base * $sideArrow_scale;
+    $width_big_base: 35px;
+    $height_big_base: 71px;
+    $width_big: $width_big_base * $sideArrow_scale;
     $height_big: $height_big_base * $sideArrow_scale;
     $offset_big: 0;
 
     $width_small_base: 20px;
-		$height_small_base: 36px;
-		$width_small: $width_small_base * $sideArrow_scale;
-		$height_small: $height_small_base * $sideArrow_scale;
-		$offset_small: GetPercent(3,$width_small_base);
+    $height_small_base: 36px;
+    $width_small: $width_small_base * $sideArrow_scale;
+    $height_small: $height_small_base * $sideArrow_scale;
+    $offset_small: GetPercent(3,$width_small_base);
 
-		display: block;
-		position: absolute;
-		width: $width_big ;
-		height: $height_big;
-		top: calc(50% - (#{$height_big} / 2));
-		left: -$width_big + $offset_big;
-		fill: $color_accent_1;
-		transform: rotate(-180deg);
-		&__small {
-			display: block;
-			position: absolute;
-			width: $width_small;
-			height: $height_small;
-			top: calc(50% - (#{$height_small} / 2));
-			left: -($width_small + (($offset_small / 100) * $width_small)) + $offset_big;
-			fill: #fff;
-			transform: rotate(0);
-			&--right {
-				left: calc(100% + ((#{$offset_small} / 100) * #{$width_small}));
-				transform: rotate(180deg);
-			}
-		}
-		&--right {
-			@include Right();
-		}
-		&--orange {
-			fill: $color_accent_2;
-		}
-	}
+    display: block;
+    position: absolute;
+    width: $width_big ;
+    height: $height_big;
+    top: calc(50% - (#{$height_big} / 2));
+    left: -$width_big + $offset_big;
+    fill: $color_accent_1;
+    transform: rotate(-180deg);
+    &__small {
+      display: block;
+      position: absolute;
+      width: $width_small;
+      height: $height_small;
+      top: calc(50% - (#{$height_small} / 2));
+      left: -($width_small + (($offset_small / 100) * $width_small)) + $offset_big;
+      fill: #fff;
+      transform: rotate(0);
+      &--right {
+        left: calc(100% + ((#{$offset_small} / 100) * #{$width_small}));
+        transform: rotate(180deg);
+      }
+    }
+    &--right {
+      @include Right();
+    }
+    &--orange {
+      fill: $color_accent_2;
+    }
+  }
 }

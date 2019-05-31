@@ -1,9 +1,9 @@
 .index {
   &__features {
     background-color: $color_content_bg_1;
-		&--bottom {
-			background-color: $color_content_bg_4;
-		}
+    &--bottom {
+      background-color: $color_content_bg_4;
+    }
   }
   &__bottomNav {
     background-color: $color_content_bg_2;
@@ -14,7 +14,7 @@
 }
 
 @include media-breakpoint-down(sm) {
-	.index {
-		background-color:$color_content_bg_1;
-	}
+  .index {
+    background-color:$color_content_bg_1;
+  }
 }

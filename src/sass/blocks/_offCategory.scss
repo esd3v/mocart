@@ -1,134 +1,134 @@
 .offCategory {
-	text-align: center;
-	background-color: $color_content_bg_1;
-	position: relative;
-	&__header {
-		margin-bottom: 15px;
-		font-size: 24px;
-		font-weight: 700;
-		letter-spacing: PS_GetLetterSpacing(-70);
-		color: $color_accent_1;
-	}
-	&__list {
-		list-style: none;
-	}
-	&__item {
-		display: flex;
-		align-items: center;
-		&:not(:last-of-type) {
-			margin-bottom: 8px;
-		}
-	}
-	&__link {
-		flex-grow: 1;
-		font-size: 18px;
-		color: #555555;
-		text-align: left;
-	}
-	&__icon {
-		width: 5px;
-		height: 9px;
-		margin-right: 29px;
-		flex-shrink: 0;
-		fill: $color_accent_1;
-	}
+  text-align: center;
+  background-color: $color_content_bg_1;
+  position: relative;
+  &__header {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: PS_GetLetterSpacing(-70);
+    color: $color_accent_1;
+  }
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    &:not(:last-of-type) {
+      margin-bottom: 8px;
+    }
+  }
+  &__link {
+    flex-grow: 1;
+    font-size: 18px;
+    color: #555555;
+    text-align: left;
+  }
+  &__icon {
+    width: 5px;
+    height: 9px;
+    margin-right: 29px;
+    flex-shrink: 0;
+    fill: $color_accent_1;
+  }
 }
 
 @include media-breakpoint-up(sm) {
-	.offCategory {
-		&__header {
-			font-size: 28px;
-		}
-		&__list {
-			display: flex;
-			flex-wrap: wrap;
-		}
-		&__item {
-			margin: 0 8px;
-			flex-grow: 9999;
-		}
-		&__link {
-			flex-grow: 0;
-			margin: auto;
-		}
-		&__icon {
-			display: none;
-		}
-	}
+  .offCategory {
+    &__header {
+      font-size: 28px;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__item {
+      margin: 0 8px;
+      flex-grow: 9999;
+    }
+    &__link {
+      flex-grow: 0;
+      margin: auto;
+    }
+    &__icon {
+      display: none;
+    }
+  }
 }
 
 @include media-breakpoint-up(md) {
-	.offCategory {
-		height: $offCategory_height;
-		padding: 13px 19px;
-		&__header {
-			@include fluidFontSize(22px, 26px, 768px, 992px);
-		}
-		&__list {
-			display: block;
-		}
-		&__item {
-			margin: 0;
-		}
-		&__link {
-			margin: 0;
-			flex-grow: 1;
-			text-align: left;
-		}
-		&__icon {
-			display: block;
-		}
-	}
+  .offCategory {
+    height: $offCategory_height;
+    padding: 13px 19px;
+    &__header {
+      @include fluidFontSize(22px, 26px, 768px, 992px);
+    }
+    &__list {
+      display: block;
+    }
+    &__item {
+      margin: 0;
+    }
+    &__link {
+      margin: 0;
+      flex-grow: 1;
+      text-align: left;
+    }
+    &__icon {
+      display: block;
+    }
+  }
 }
 
 @include media-breakpoint-up(xl) {
-	.offCategory {
-		text-align: left;
-		padding: 24px 33px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		background-image: url("../assets/images/offcat_1.jpg");
-		&__header {
-			width: 80%;
-			font-size: 32px;
-			margin-bottom: 15px;
-			line-height: 100%;
-			font-weight: 700;
-		}
-		&__list {
-			line-height: 100%;
-		}
-		&__item {
-			&:not(:last-of-type) {
-				margin-bottom: 14px;
-			}
-		}
-		&__link {
-			flex-grow: 0;
-		}
-		&__icon {
-			&--white {
-				fill: #fff;
-			}
-		}
-		&--second {
+  .offCategory {
+    text-align: left;
+    padding: 24px 33px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../assets/images/offcat_1.jpg");
+    &__header {
+      width: 80%;
+      font-size: 32px;
+      margin-bottom: 15px;
+      line-height: 100%;
+      font-weight: 700;
+    }
+    &__list {
+      line-height: 100%;
+    }
+    &__item {
+      &:not(:last-of-type) {
+        margin-bottom: 14px;
+      }
+    }
+    &__link {
+      flex-grow: 0;
+    }
+    &__icon {
+      &--white {
+        fill: #fff;
+      }
+    }
+    &--second {
       background-image: url("../assets/images/offcat_2.jpg");
       & h2 {
         color: #38464f;
       }
-		}
-		&--third {
+    }
+    &--third {
       background-image: url("../assets/images/offcat_3.jpg");
       & h2 {
         color: #fff;
       }
       & a {
         color: #fff;
-				&:hover {
-					color: #222;
-				}
+        &:hover {
+          color: #222;
+        }
       }
-		}
-	}
+    }
+  }
 }

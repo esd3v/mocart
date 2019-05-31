@@ -1,27 +1,27 @@
 .footer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-	padding: 40px 0;
-	color: #fff;
-	&__creditCards {
-		margin: 16px 0;
-	}
-	&__creditCard {
-		width: 36px;
-		height: 21px;
-	}
-	&__designBy {
-		letter-spacing: 0.05em;
-	}
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+  color: #fff;
+  &__creditCards {
+    margin: 16px 0;
+  }
+  &__creditCard {
+    width: 36px;
+    height: 21px;
+  }
+  &__designBy {
+    letter-spacing: 0.05em;
+  }
 }
 
 @include media-breakpoint-up(lg) {
-	.footer {
-		flex-direction: row;
-		&__creditCards {
-			margin: 0;
-		}
-	}
+  .footer {
+    flex-direction: row;
+    &__creditCards {
+      margin: 0;
+    }
+  }
 }

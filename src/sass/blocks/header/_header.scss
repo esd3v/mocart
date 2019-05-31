@@ -1,25 +1,25 @@
 .header {
-	padding-top: $mobileHeader_height;
-	color: $color_header_txt;
-	background-color: $color_content_bg_3;
-	text-transform: uppercase;
-	&__middle {
-		border-bottom: 1px solid #4b5860;
-		$colorStart: #406884;
-		$colorMiddle: darken(desaturate(adjust-hue($colorStart, -1.0217), 10.3349), 7.8431);
-		$colorEnd: $color_content_bg_2;
-		$posStart: 46%;
-		$posEnd: $posStart+4;
-		background: linear-gradient(150deg,
-			$colorStart 0%,
-			$colorStart $posStart,
-			$colorMiddle $posStart,
-			$colorMiddle $posEnd,
-			$colorEnd $posEnd,
-			$colorEnd 100%);
-	}
-	&__bottom {
-		background-color: $color_content_bg_2;
+  padding-top: $mobileHeader_height;
+  color: $color_header_txt;
+  background-color: $color_content_bg_3;
+  text-transform: uppercase;
+  &__middle {
+    border-bottom: 1px solid #4b5860;
+    $colorStart: #406884;
+    $colorMiddle: darken(desaturate(adjust-hue($colorStart, -1.0217), 10.3349), 7.8431);
+    $colorEnd: $color_content_bg_2;
+    $posStart: 46%;
+    $posEnd: $posStart+4;
+    background: linear-gradient(150deg,
+      $colorStart 0%,
+      $colorStart $posStart,
+      $colorMiddle $posStart,
+      $colorMiddle $posEnd,
+      $colorEnd $posEnd,
+      $colorEnd 100%);
+  }
+  &__bottom {
+    background-color: $color_content_bg_2;
   }
   &__actions {
     display: flex;
@@ -29,7 +29,7 @@
 }
 
 @include media-breakpoint-up(md) {
-	.header {
+  .header {
     padding-top: 0;
     &__actions {
       align-items: flex-end;
@@ -37,5 +37,5 @@
       justify-content: space-between;
       flex-wrap: wrap;
     }
-	}
+  }
 }
