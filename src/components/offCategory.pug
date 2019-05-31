@@ -1,0 +1,9 @@
+mixin OffCategory(header, categories, mod)
+  .offCategory(class=mod && `offCategory--${mod}`)
+    h2.offCategory__header= header
+    ul.offCategory__list
+      for item in categories
+        li.offCategory__item
+          +Icon("arrow-triangle", false, "offCategory__icon")
+          a.offCategory__link(href=item.href)= item.label
+    block

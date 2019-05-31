@@ -1,4 +1,4 @@
-.footerBottom {
+.footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -18,7 +18,7 @@
 }
 
 @include media-breakpoint-up(lg) {
-	.footerBottom {
+	.footer {
 		flex-direction: row;
 		&__creditCards {
 			margin: 0;

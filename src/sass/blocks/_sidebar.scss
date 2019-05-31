@@ -37,21 +37,20 @@
 	}
 	&__number {
 		color: #d9d71a;
-	}
-}
-
-.sidebarOverlay {
-	display: none;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: $sidebar_z - 1;
-	background-color: rgba(0,0,0,0.0);
-	&--open {
-		display: block;
-		background-color: rgba(0,0,0,0.5);
-		transition: background-color $sidebar_transitionSpeed $sidebar_transitionType;
-	}
+  }
+  &__overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $sidebar_z - 1;
+    background-color: rgba(0,0,0,0.0);
+    &--open {
+      display: block;
+      background-color: rgba(0,0,0,0.5);
+      transition: background-color $sidebar_transitionSpeed $sidebar_transitionType;
+    }
+  }
 }

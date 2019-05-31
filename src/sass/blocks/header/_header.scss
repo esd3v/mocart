@@ -1,5 +1,5 @@
 .header {
-	padding-top: $topnav_height;
+	padding-top: $mobileHeader_height;
 	color: $color_header_txt;
 	background-color: $color_content_bg_3;
 	text-transform: uppercase;
@@ -20,11 +20,22 @@
 	}
 	&__bottom {
 		background-color: $color_content_bg_2;
-	}
+  }
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+  }
 }
 
 @include media-breakpoint-up(md) {
 	.header {
-		padding-top: 0;
+    padding-top: 0;
+    &__actions {
+      align-items: flex-end;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 	}
 }

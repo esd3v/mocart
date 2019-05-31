@@ -95,12 +95,6 @@
 			margin-bottom: 15px;
 			line-height: 100%;
 			font-weight: 700;
-			&--second {
-				color: #38464f;
-			}
-			&--third {
-				color: #fff;
-			}
 		}
 		&__list {
 			line-height: 100%;
@@ -112,12 +106,6 @@
 		}
 		&__link {
 			flex-grow: 0;
-			&--third {
-				color: #fff;
-				&:hover {
-					color: #222;
-				}
-			}
 		}
 		&__icon {
 			&--white {
@@ -125,10 +113,22 @@
 			}
 		}
 		&--second {
-			background-image: url("../assets/images/offcat_2.jpg");
+      background-image: url("../assets/images/offcat_2.jpg");
+      & h2 {
+        color: #38464f;
+      }
 		}
 		&--third {
-			background-image: url("../assets/images/offcat_3.jpg");
+      background-image: url("../assets/images/offcat_3.jpg");
+      & h2 {
+        color: #fff;
+      }
+      & a {
+        color: #fff;
+				&:hover {
+					color: #222;
+				}
+      }
 		}
 	}
 }

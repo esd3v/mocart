@@ -138,6 +138,10 @@ module.exports = {
     new ProgressBarPlugin({
       format: '[:bar]',
     }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.pug',

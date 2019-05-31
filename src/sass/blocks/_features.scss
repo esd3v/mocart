@@ -3,9 +3,14 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px 0;
+  padding: 10px 0;
+  font-size: 18px;
+  color: #4b4b4b;
+	fill: $color_accent_1;
 	&--bottom {
-		padding: 28px 0;
+    padding: 28px 0;
+    color: #fff;
+		fill: #fff;
 	}
 }
 
@@ -15,11 +20,20 @@
 	}
 }
 
+@include media-breakpoint-up(md) {
+	.features {
+		font-size: 15px;
+	}
+}
+
 @include media-breakpoint-up(xl) {
 	.features {
 		justify-content: center;
 		&--bottom {
-			justify-content: space-between;
+      justify-content: space-between;
+      & > * {
+        width: auto;
+      }
 		}
 	}
 }

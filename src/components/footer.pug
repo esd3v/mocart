@@ -1,0 +1,10 @@
+mixin Footer
+  footer.footer
+    p.footer__copyright Copyright © 2015 mocart.com All rights reserved.
+    .footer__creditCards
+      +Icon("card_discover", true, "footer__creditCard")
+      +Icon("card_maestro", true, "footer__creditCard")
+      +Icon("card_mastercard", true, "footer__creditCard")
+      +Icon("card_paypal", true, "footer__creditCard")
+      +Icon("card_visa", true, "footer__creditCard")
+    p.footer__designBy Design by: #[img.footer__bee(src=require("assets/images/bee.png") width="29" height="26" alt="Bee")] #[a(href="https://psdfreebies.com/psd/mocart-e-commerce-website-psd-template/") PSDFreebies.com]

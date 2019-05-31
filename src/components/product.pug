@@ -1,0 +1,7 @@
+mixin Product(name, price, discount, image)
+  .product
+    img.product__photo(src=image width="132" height="160" alt=`Product #${i + 1}`)
+    h5.product__name= name
+    .product__rating
+    h6.product__offPrice #[del Rs #{price}] [#{discount}% OFF]
+    h3.product__currentPrice Rs #{Math.ceil(price - (price * discount) / 100)}

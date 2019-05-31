@@ -1,0 +1,14 @@
+mixin AccountMenu
+  -
+    var links = [
+      {label: 'My account',  href: '#', iconID: 'user'},
+      {label: 'Track order',  href: '#', iconID: 'map-marker'},
+      {label: 'Login',  href: '#', iconID: 'padlock'},
+    ];
+
+  .accountMenu
+    ul.accountMenu__links
+      for item in links
+        li.accountMenu__link
+          +AccountLink(item.label, item.href, item.iconID)
+    +ButtonCart

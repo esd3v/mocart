@@ -1,0 +1,9 @@
+mixin GoQuickly
+  div.goQuickly
+    div.goQuickly__labelContainer
+      b.goQuickly__label Go quickly to
+      +Icon("arrow-circle", false, "goQuickly__icon")
+    ul.goQuickly__list
+      each item in menuLinks
+        li.goQuickly__item
+          +MenuLink(class="goQuickly__link" href=item.url label=item.label)

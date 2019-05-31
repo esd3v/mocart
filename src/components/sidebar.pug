@@ -1,0 +1,13 @@
+mixin Sidebar
+  nav.sidebar
+    ul.sidebar__menu
+      li.sidebar__menuItem.sidebar__menuItem--header Support
+      li.sidebar__menuItem #[a.sidebar__menuLink(href="tel:+180012345678") Contact: #[span.sidebar__number +1800 1234 5678]]
+      each item in supportLinks
+        li.sidebar__menuItem
+          +MenuLink(class="sidebar__menuLink" href=item.url label=item.label)
+      li.sidebar__menuIte.sidebar__menuItem--header Go Quickly
+      each item, i in menuLinks
+        li.sidebar__menuItem
+          +MenuLink(class="sidebar__menuLink" href=item.url label=item.label)
+  .sidebar__overlay

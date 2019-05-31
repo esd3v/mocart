@@ -1,0 +1,4 @@
+mixin AccountLink(label, href, iconID)
+  a.accountLink(href=href)
+    +Icon(iconID, false, "accountLink__icon")
+    span.accountLink__label= label

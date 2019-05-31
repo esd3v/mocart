@@ -1,0 +1,42 @@
+.accountMenu {
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+  }
+}
+
+@include media-breakpoint-up(md) {
+	.accountMenu {
+    margin-top: 32px;
+		flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 100%;
+    &__links {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+		&__link {
+			display: flex;
+			align-items: center;
+			&:not(:first-of-type) {
+				&::before {
+					content: "|";
+					margin: 0 10px;
+					color: #a8a8a8;
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.accountMenu {
+    margin-top: 0;
+    flex-basis: 30%;
+	}
+}

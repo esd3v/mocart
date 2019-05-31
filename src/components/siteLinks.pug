@@ -1,0 +1,6 @@
+mixin SiteLinks(links)
+  ul.siteLinks
+    for item in links
+      li.siteLinks__item
+        +Icon("arrow-triangle", false, "siteLinks__icon")
+        a.siteLinks__link(href=item.href)= item.label

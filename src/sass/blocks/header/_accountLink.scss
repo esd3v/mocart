@@ -1,0 +1,34 @@
+.accountLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  margin: 8px 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  fill: #fff;
+  &:hover {
+    fill: $color_accent_2;
+  }
+  &__label {
+		order: 1;
+	}
+	&__icon {
+		order: 2;
+		fill: inherit;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.accountLink {
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    &__label {
+			order: 2;
+			margin-top: 10px;
+			margin-left: 0;
+		}
+	}
+}

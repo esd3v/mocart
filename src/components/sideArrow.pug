@@ -1,0 +1,11 @@
+mixin SideArrow(isRight = false, isOrange = false)
+  +Icon(
+    "arrow-triangle",
+    false,
+    `sideArrow${isRight ? ' sideArrow--right' : ''}${isOrange ? ' sideArrow--orange' : ''}`
+  )
+  +Icon(
+    "arrow-angle",
+    false,
+    `sideArrow__small${isRight ? ' sideArrow__small--right' : ''}`
+  )

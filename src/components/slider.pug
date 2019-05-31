@@ -1,0 +1,13 @@
+mixin Slider
+  -
+    var slides = [
+      {name: "slide_1", url: "#"},
+      {name: "slide_2", url: "#"},
+      {name: "slide_3", url: "#"},
+      {name: "slide_4", url: "#"},
+    ];
+
+  div.swiper-container
+    div.swiper-wrapper
+      each slide, i in slides
+        +Slide(slides[i].name,slides[i].url)

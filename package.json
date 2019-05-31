@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "author": "ES",
+  "author": "",
   "license": "ISC",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.config.js",
@@ -34,10 +34,10 @@
     "webpack-merge": "4.2.1"
   },
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.4",
     "jquery": "3.4.0",
-    "jquery.rateit": "1.1.2",
     "normalize.css": "4.2.0",
-    "swiper": "3.3.1"
+    "bootstrap": "4.0.0-alpha.4",
+    "swiper": "3.3.1",
+    "jquery.rateit": "1.1.2"
   }
 }

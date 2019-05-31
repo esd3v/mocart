@@ -27,6 +27,7 @@ img, svg {
 }
 
 a {
+  color: #fff;
 	text-decoration: none;
 	&:hover {
 		color: $color_accent_2;
@@ -53,21 +54,6 @@ figure {
 	fill: #fff;
 }
 
-.part {
-	&Features {
-		background-color: $color_content_bg_1;
-		&--bottom {
-			background-color: $color_content_bg_4;
-		}
-	}
-	&FooterCategories {
-		background-color: $color_content_bg_2;
-	}
-	&FooterBottom {
-		background-color: $color_content_bg_3;
-	}
-}
-
 .rateit {
 	$color: #f6b800;
 	&-selected {
@@ -75,13 +61,5 @@ figure {
 	}
 	&-hover {
 		color: darken($color,25%) !important;
-	}
-}
-
-// Global Media
-///////////////////////////////////////////////////////////
-@include media-breakpoint-down(sm) {
-	body {
-		background-color:$color_content_bg_1;
 	}
 }

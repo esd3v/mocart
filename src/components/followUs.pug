@@ -1,0 +1,15 @@
+mixin FollowUs
+  -
+    var links = [
+      {iconID: 'facebook', href:'#'},
+      {iconID: 'youtube', href:'#'},
+      {iconID: 'twitter', href:'#'},
+      {iconID: 'linkedin', href:'#'},
+    ];
+
+  .followUs
+    h4.followUs__header Follow us
+    .followUs__icons
+      for item in links
+        a.followUs__link(href=item.href)
+          +Icon(item.iconID, false, "followUs__icon")

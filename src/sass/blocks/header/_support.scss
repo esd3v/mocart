@@ -10,10 +10,6 @@
 		opacity: 0;
 		max-height: 0;
 		transition: all 0.5s ease-in-out;
-		&--show {
-			opacity: 1;
-			max-height: 512px;
-		}
 	}
 	&__item {
 		@include Accordion_SetBorder();
@@ -28,13 +24,6 @@
 			width: auto;
 		}
 	}
-	&__collapse {
-		width: 100%;
-		padding: $padding;
-		background-color: $color_content_bg_3;
-		color: $color_header_txt;
-		text-transform: uppercase;
-	}
 }
 
 @include media-breakpoint-up(sm) {
@@ -45,9 +34,6 @@
 			align-items: center;
 			opacity: 1;
 			max-height: none;
-		}
-		&__collapse {
-			display: none;
 		}
 		&__item {
 			display: flex;

@@ -1,0 +1,19 @@
+mixin Header
+  header.header
+    .container
+      .row.hidden-sm-down
+        .col-md-12
+          +Support
+    .header__middle
+      .container
+        .header__actions
+          +Icon("logo", true, "logo")
+          +SearchBar
+          +AccountMenu
+    .header__bottom
+      .container
+        .row
+          .col-lg-12
+            nav.filter
+              +ShopEverything
+              +Tabs

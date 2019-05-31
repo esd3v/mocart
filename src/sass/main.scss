@@ -21,14 +21,15 @@
 @import "blocks/header/support";
 @import "blocks/header/logo";
 @import "blocks/header/searchbar";
-@import "blocks/header/userbar";
 @import "blocks/header/cart";
-@import "blocks/header/account";
+@import "blocks/header/accountMenu";
+@import "blocks/header/accountLink";
 @import "blocks/header/filter";
 @import "blocks/header/tabs";
 @import "blocks/header/shopEverything";
 
-@import "blocks/topnav";
+@import "blocks/index";
+@import "blocks/mobileHeader";
 @import "blocks/sidebar";
 @import "blocks/feature";
 @import "blocks/features";
@@ -40,8 +41,9 @@
 @import "blocks/sideArrow";
 @import "blocks/products";
 @import "blocks/product";
-@import "blocks/footerCategory";
-@import "blocks/footerCategories";
+@import "blocks/siteLinks";
+@import "blocks/bottomNav";
 @import "blocks/newsletterSignUp";
 @import "blocks/followUs";
-@import "blocks/footerBottom";
+@import "blocks/footer";
+@import "blocks/news";

@@ -1,0 +1,6 @@
+mixin Feature(iconID, title, description)
+  .feature
+    +Icon(iconID, false, `feature__icon ${`feature__icon--${iconID}`}`)
+    .feature__textBlock
+      h5.feature__title= title
+      h6.feature__description= description

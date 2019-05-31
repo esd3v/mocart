@@ -1,0 +1,6 @@
+mixin Icon(id, isColored, className)
+  -
+    require(`assets/icons/${isColored ? `colored/` : ''}${id}.svg`);
+
+  svg(class=`icon icon--${id} ${className}`)
+    use(xlink:href=`assets/sprite.svg#${id}`)
