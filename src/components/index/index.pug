@@ -1,0 +1,124 @@
+include ../accountLink/accountLink.pug
+include ../accountMenu/accountMenu.pug
+include ../bottomNav/bottomNav.pug
+include ../buttonCart/buttonCart.pug
+include ../countdown/countdown.pug
+include ../deals/deals.pug
+include ../feature/feature.pug
+include ../features/features.pug
+include ../filter/filter.pug
+include ../followUs/followUs.pug
+include ../footer/footer.pug
+include ../goQuickly/goQuickly.pug
+include ../header/header.pug
+include ../icon/icon.pug
+include ../logo/logo.pug
+include ../mainBar/mainBar.pug
+include ../mobileHeader/mobileHeader.pug
+include ../news/news.pug
+include ../newsletterSignup/newsletterSignup.pug
+include ../offCategory/offCategory.pug
+include ../offPrice/offPrice.pug
+include ../product/product.pug
+include ../products/products.pug
+include ../searchBar/searchBar.pug
+include ../shopEverything/shopEverything.pug
+include ../sideArrow/sideArrow.pug
+include ../sidebar/sidebar.pug
+include ../siteLinks/siteLinks.pug
+include ../slide/slide.pug
+include ../slider/slider.pug
+include ../support/support.pug
+include ../tabs/tabs.pug
+
+-
+  var supportLinks = [
+    {label: 'Contact Us', url: '#'},
+    {label: 'Help', url: '#'},
+  ];
+
+  var menuLinks = [
+    {label: 'Mobiles', url: '#'},
+    {label: 'Sports', url: '#'},
+    {label: 'Tables', url: '#'},
+    {label: 'Bath towels', url: '#'},
+    {label: 'LED bulbs', url: '#'},
+    {label: 'TV', url: '#'},
+    {label: 'Washing machines', url: '#'},
+    {label: 'Laptops', url: '#'},
+    {label: 'Headphones', url: '#'},
+    {label: 'Fans', url: '#'},
+    {label: 'Travel', url: '#'},
+    {label: 'Books', url: '#'},
+  ];
+
+  var offCategories1 = [
+    {label: 'Apple Mobile', href: '#'},
+    {label: 'Samsung Mobile', href: '#'},
+    {label: 'Micromax Mobile', href: '#'},
+    {label: 'Nokia Mobile', href: '#'},
+    {label: 'Apple Mobile', href: '#'},
+    {label: 'HTC Mobile', href: '#'},
+  ];
+
+  var offCategories2 = [
+    {label: 'Bags and Wallets', href: '#'},
+    {label: 'Belts', href: '#'},
+    {label: 'Bootees', href: '#'},
+    {label: 'Cold Weather', href: '#'},
+    {label: 'Jewelry', href: '#'},
+    {label: 'Ties and Hats', href: '#'},
+  ];
+
+  var offCategories3 = [
+    {label: 'Bras', href: '#'},
+    {label: 'Hair Accessories', href: '#'},
+    {label: 'Hars and Gloves', href: '#'},
+    {label: 'Lifestyle', href: '#'},
+    {label: 'Scarves', href: '#'},
+    {label: 'Small Leathers', href: '#'},
+  ];
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="description", content="")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title MoCart — eCommerce PSD Template
+  body.index
+    +MobileHeader
+    +Sidebar
+    +Header
+    .index__features
+      .container
+        +Features(false)
+    .container.m-t-2.m-b-3
+      .row
+        .col-md-6.col-xl-8
+          +Slider
+        .col-md-6.col-xl-4
+          +Deals
+      +GoQuickly
+      .row
+        .col-md-4.m-t-2
+          +OffCategory("20% off on Mobiles & more.*", offCategories1)
+            +SideArrow(false)
+        .col-md-4.m-t-2
+          +OffCategory("50% off on Fashion wear & more.*", offCategories2, "second")
+        .col-md-4.m-t-2
+          +OffCategory("20% off activewear & more.*", offCategories3, "third")
+            +SideArrow(true)
+      +Products("Leatest products", products)
+      +Products("Clearance Sale", products)
+      +Products("Your Recently Viewed items", products)
+    .index__features.index__features--bottom
+      .container
+        +Features(true)
+    .index__bottomNav
+      .container
+        +BottomNav
+    .index__footer
+      .container
+        +Footer

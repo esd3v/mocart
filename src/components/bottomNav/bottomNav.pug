@@ -1,0 +1,58 @@
+mixin BottomNav
+  -
+    var links = [
+      {
+        title: 'Help',
+        links: [
+          {label: 'Contact Customer Service', href: '#'},
+          {label: 'ScoreCard', href: '#'},
+          {label: 'Product Availability', href: '#'},
+          {label: 'Recalls', href: '#'},
+          {label: 'Return Policy', href: '#'},
+          {label: 'Shipping Rates', href: '#'},
+        ],
+      },
+      {
+        title: 'Company',
+        links: [
+          {label: 'About Us', href: '#'},
+          {label: 'Affiliate Program', href: '#'},
+          {label: 'Careers', href: '#'},
+          {label: 'Gift Shop', href: '#'},
+          {label: 'Group Sales', href: '#'},
+          {label: 'Contact us', href: '#'},
+        ],
+      },
+      {
+        title: 'My account',
+        links: [
+          {label: 'Your Account', href: '#'},
+          {label: 'Information', href: '#'},
+          {label: 'Addresses', href: '#'},
+          {label: 'Orders history', href: '#'},
+          {label: 'Delivery information', href: '#'},
+          {label: 'Search terms', href: '#'},
+        ],
+      },
+      {
+        title: 'Informations',
+        links: [
+          {label: 'Terms and conditions', href: '#'},
+          {label: 'About us', href: '#'},
+          {label: 'Sitemap', href: '#'},
+          {label: 'Contact', href: '#'},
+          {label: 'Return policy', href: '#'},
+          {label: 'Suppliers', href: '#'},
+        ],
+      },
+    ];
+
+  nav.bottomNav
+    for item in links
+      section.bottomNav__section
+        h4.bottomNav__header= item.title
+        +SiteLinks(item.links)
+    section.bottomNav__section
+      h4.bottomNav__header Sale news
+      +News
+      +FollowUs

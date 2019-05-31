@@ -1,0 +1,28 @@
+.deals {
+  height: 382px;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  &__title {
+    @include fluidFontSize(24px, 40px, 320px, 1200px);
+    line-height: 100%;
+    font-weight: 700;
+    color: $color_accent_1;
+    text-transform: uppercase;
+  }
+  &__endIn {
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  &__photo {
+    margin-top: 28px;
+  }
+  &__name {
+    margin-top: 24px;
+    margin-bottom: 22px;
+    font-weight: 700;
+    color: #373737;
+  }
+}

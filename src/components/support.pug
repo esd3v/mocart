@@ -1,7 +1,0 @@
-mixin Support
-  address.support
-    ul.support__menu
-      li.support__item Contact &amp; support: #[a.support__link.support__link--number(href="tel:+18001235678") +1800 1234 5678]
-      each item in supportLinks
-        li.support__item
-          +MenuLink(class="support__link" href=item.url label=item.label)

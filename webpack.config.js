@@ -144,7 +144,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'index.pug',
+      template: 'components/index/index.pug',
       title: 'Mocart',
     }),
     new MiniCssExtractPlugin({

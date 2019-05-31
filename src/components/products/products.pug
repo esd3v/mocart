@@ -1,0 +1,17 @@
+mixin Products(title, products)
+  -
+    var products = [
+      {name: 'Samsung 16GB MicroSD Class 6', price: 499, discount: 30, image: 'assets/images/product_1.jpg'},
+      {name: 'Samsung 16GB MicroSD Class 6', price: 499, discount: 30, image: 'assets/images/product_2.jpg'},
+      {name: 'Samsung 16GB MicroSD Class 6', price: 499, discount: 30, image: 'assets/images/product_3.jpg'},
+      {name: 'Samsung 16GB MicroSD Class 6', price: 499, discount: 30, image: 'assets/images/product_4.jpg'},
+      {name: 'Samsung 16GB MicroSD Class 6', price: 499, discount: 30, image: 'assets/images/product_5.jpg'},
+    ];
+
+  .products
+    h2.products__header= title
+    .products__container
+      +SideArrow(false, true)
+      +SideArrow(true, true)
+      for item, i in products
+        +Product(item.name, item.price, item.discount, item.image)

@@ -1,8 +1,0 @@
-mixin Products(title, products)
-  .products
-    h2.products__header= title
-    .products__container
-      +SideArrow(false, true)
-      +SideArrow(true, true)
-      for item, i in products
-        +Product(item.name, item.price, item.discount, item.image)

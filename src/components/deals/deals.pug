@@ -1,0 +1,8 @@
+mixin Deals
+  .deals
+    h1.deals__title Today's deals
+    h4.deals__endIn End in
+    +Countdown
+    img.deals__photo(src=require('assets/images/deals.png') width="172" height="137" alt="Samsung 16GB MicroSD Class 6")
+    h5.deals__name Samsung 16GB MicroSD Class 6
+    +OffPrice(499, 30, true)

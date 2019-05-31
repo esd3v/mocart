@@ -1,0 +1,18 @@
+mixin SearchBar
+  -
+    var categories = [
+      {value: 'all', label: 'All categories', selected: true},
+      {value: 'fashion', label: 'Fashion', selected: false},
+      {value: 'booksmedia', label: 'Books & media', selected: false},
+      {value: 'clearance', label: 'Clearance', selected: false},
+      {value: 'mobile', label: 'Mobile phones', selected: false},
+    ];
+
+  form.searchBar(action="search.php" method="GET")
+    select.searchBar__categories(name="category")
+      for item in categories
+        option.searchBar__category(value=item.value selected=item.selected)= item.label
+    .searchBar__search
+      input.searchBar__input(type="search" name="search" placeholder="Search entire store here...")
+      button.searchBar__button(type="submit")
+        +Icon("search", false, "searchBar__icon")

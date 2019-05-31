@@ -1,0 +1,14 @@
+.mainBar {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+}
+
+@include media-breakpoint-up(md) {
+  .mainBar {
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,4 @@
+mixin OffPrice(price, discount, isRow)
+  .offPrice(class=isRow && "offPrice--row")
+    h6.offPrice__discount #[del Rs #{price}] [#{discount}% OFF]
+    h3.offPrice__currentPrice Rs #{Math.ceil(price - (price * discount) / 100)}

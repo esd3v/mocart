@@ -2,9 +2,9 @@ export const countdown = () => {
   const timer = [0, 1, 15, 45];
   const totalMsec = ((((((timer[0] * 24) + timer[1]) * 60) + timer[2]) * 60) + timer[3] ) * 1000;
   const endDate = new Date(Date.now() + totalMsec);
-  const hoursEl = document.getElementsByClassName('countDown__digit--hours')[0];
-  const minutesEl = document.getElementsByClassName('countDown__digit--minutes')[0];
-  const secondsEl = document.getElementsByClassName('countDown__digit--seconds')[0];
+  const hoursEl = document.getElementsByClassName('countdown__digit--hours')[0];
+  const minutesEl = document.getElementsByClassName('countdown__digit--minutes')[0];
+  const secondsEl = document.getElementsByClassName('countdown__digit--seconds')[0];
 
   const setText = (el, val) => {
     const joined = `0${val}`;

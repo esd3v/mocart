@@ -1,0 +1,6 @@
+mixin NewsletterSignup
+  form.newsletterSignup(action="newsletter.php" method="POST")
+    input.newsletterSignup__input(type="email" name="email" placeholder="Sign up for our Newsletter!")
+    button.newsletterSignup__button(type="submit")
+      span.newsletterSignup__buttonContainer
+        +Icon("envelope", false, "newsletterSignup__icon")
