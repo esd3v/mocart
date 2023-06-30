@@ -1,3 +1,7 @@
+// Load svg files
+const svgModules = require.context('assets/icons', true, /\.svg$/);
+svgModules.keys().forEach(svgModules);
+
 require('sass/main.scss');
 import 'js/misc.js';
 import * as config from 'js/config';

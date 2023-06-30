@@ -1,6 +1,6 @@
 mixin Product(name, price, discount, image)
   .product
-    img.product__photo(src=image width="132" height="160" alt=`Product #${i + 1}`)
+    img.product__photo(src=require(image) width="132" height="160" alt=`Product #${i + 1}`)
     h5.product__name= name
     .product__rating
     +OffPrice(price, discount)

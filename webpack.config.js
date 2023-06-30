@@ -1,10 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
-const WebappWebpackPlugin = require('webapp-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const DIR_SRC = path.resolve(__dirname, './src');
 const DIR_BUILD = path.resolve(__dirname, './dist');
@@ -39,54 +39,31 @@ module.exports = {
       },
       {
         test: /\.(pug)$/,
-        use: [
-          'pug-loader',
-        ],
+        loader: '@webdiscus/pug-loader',
+        options: {
+          method: 'render'
+        }
       },
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader',
-        ],
-      },
-      {
-        test: /\.(eot|ttf|woff|woff2)$/,
-        use: [
           {
-            loader: 'file-loader',
+            loader: 'sass-loader',
             options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/fonts/',
-            },
+              sassOptions: { quietDeps: true },
+            }
           }
         ],
       },
       {
+        test: /\.(eot|ttf|woff|woff2)$/,
+        type: 'asset/resource',
+      },
+      {
         test: /\.(jpe?g|png|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/images/',
-            },
-          },
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              pngquant: {
-                quality: '65-85',
-                speed: 2,
-              },
-              mozjpeg: {
-                progressive: true,
-                quality: 75,
-              },
-            },
-          },
-        ],
+        type: 'asset',
       },
       {
         test: /\.(svg)$/,
@@ -105,13 +82,18 @@ module.exports = {
             loader: 'svgo-loader',
             options: {
               plugins: [
-                {removeTitle: true},
-                {cleanupEnableBackground: true},
-                {cleanupAttrs: true},
-                {removeEmptyAttrs: true},
-                {removeDimensions: true},
-                {removeStyleElement: true},
-                {removeAttrs: {attrs: ['fill', 'stroke']}},
+                'removeTitle',
+                'cleanupEnableBackground',
+                'cleanupAttrs',
+                'removeEmptyAttrs',
+                'removeDimensions',
+                'removeStyleElement',
+                {
+                  name: "removeAttrs",
+                  params: {
+                    attrs: "(fill|stroke)"
+                  }
+                }
               ],
             },
           },
@@ -142,6 +124,7 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery'
     }),
+    // Don't use pug-plugin since it has problems with favicon generator
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'components/index/index.pug',
@@ -152,7 +135,7 @@ module.exports = {
       chunkFilename: 'vendor.[hash].css',
     }),
     new SpriteLoaderPlugin(),
-    new WebappWebpackPlugin({
+    new FaviconsWebpackPlugin({
       logo: `${DIR_IMAGES}/favicon.png`,
       background: '#fff',
       appName: 'Mocart'
