@@ -2,3 +2,4 @@ src/libs
 dist/
 node_modules/
 /.project
+.vercel
